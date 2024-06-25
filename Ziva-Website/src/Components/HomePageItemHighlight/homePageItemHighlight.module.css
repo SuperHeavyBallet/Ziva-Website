@@ -1,0 +1,13 @@
+
+
+.homePageItemHighlightContainer{
+    background-color: var(--bright-colour);
+    border: 1px dashed var(--dark-colour);
+    margin: 1vh 2vw;
+    padding: 1vh 2vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}

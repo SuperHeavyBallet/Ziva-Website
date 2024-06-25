@@ -1,0 +1,29 @@
+:root{
+    --bright-colour: #fff;
+    --mid-colour: #ececec;
+    --dark-colour: #999999;
+}
+
+.heroBannerContainer{
+
+    border: 1px dashed var(--dark-colour);
+    margin: 1vh 2vw;
+    padding: 1vh 2vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.heroBannerTextArea{
+    display: flex;
+    flex-direction: column;
+}
+
+.heroBannerImageArea{
+    max-height: 30vh;
+    overflow: hidden;
+    max-width: 30vw;
+    
+}

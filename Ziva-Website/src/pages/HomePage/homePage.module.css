@@ -1,0 +1,20 @@
+:root{
+    --bright-colour: #fff;
+    --mid-colour: #ececec;
+
+    
+}
+
+.pageContainer{
+    background-color: var(--mid-colour);
+    width: 100vw;
+    height: 100vh;
+    padding-top: 7vh;
+}
+
+@media (min-width: 100vw) {
+
+    .pageContainer{
+        width: calc(100vw - 17px);
+    }
+}

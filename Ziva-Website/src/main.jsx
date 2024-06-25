@@ -1,7 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { Router, createBrowserRouter, RouterProvider } from 'react-router-dom'
-import HomePage from './pages/homePage'
+import HomePage from './pages/HomePage/homePage'
+import CataloguePage from './pages/CataloguePage/cataloguePage'
+import AboutUsPage from './pages/AboutUsPage/aboutUsPage'
 
 
 import './index.css'
@@ -9,15 +11,15 @@ import './index.css'
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <div>Hello world!</div>
-  },
-  {
-    path: "home",
     element: <HomePage />
   },
   {
     path: "catalogue",
-    element: <div>Catalogue Page!</div>
+    element: <CataloguePage />
+  },
+  {
+    path: "about",
+    element: <AboutUsPage />
   },
 ]);
 
