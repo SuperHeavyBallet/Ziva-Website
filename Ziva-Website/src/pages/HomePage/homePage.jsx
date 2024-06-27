@@ -4,6 +4,8 @@ import HeroBanner from "../../Components/HeroBanner/heroBanner"
 import HomePageItemHighlight from "../../Components/HomePageItemHighlight/homePageItemHighlight"
 import bannerImage from "../../../public/images/tempBannerImage.png"
 import HomePageContactSection from "../../Components/HomePageContactSection/homePageContactSection"
+import products from "../../../public/products.json"
+
 
 export default function HomePage(){
 
@@ -15,7 +17,9 @@ export default function HomePage(){
                 bannerImageSrc={bannerImage}
                 bannerText="Veros odus quintum fax niel et hadif qul far epo"
             />
-            <HomePageItemHighlight />
+            <HomePageItemHighlight 
+                highlightItems={products}
+            />
             <HomePageContactSection />
             Home Page!
         </div>

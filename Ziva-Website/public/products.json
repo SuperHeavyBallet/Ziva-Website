@@ -1,0 +1,233 @@
+[
+    {
+        "id": 0,
+        "name": "Red Plastic Bag",
+        "dimensions": "10x10x10cm",
+        "description": "A red plastic bag.",
+        "weight": "1kg",
+        "image": "./images/temp_red_plastic_bag.png",
+        "price": "0.99",
+        "group": "plastic_bag",
+        "groupName": "Plastic Bags"
+    },
+    {
+        "id": 1,
+        "name": "White Plastic Bag",
+        "dimensions": "10x10x10cm",
+        "description": "A white plastic bag.",
+        "weight": "1kg",
+        "image": "./images/temp_white_plastic_bag.png",
+        "price": "0.99",
+        "group": "plastic_bag",
+        "groupName": "Plastic Bags"
+    },
+    {
+        "id": 2,
+        "name": "Blue Plastic Bag",
+        "dimensions": "10x10x10cm",
+        "description": "A blue plastic bag.",
+        "weight": "1kg",
+        "image": "./images/temp_blue_plastic_bag.png",
+        "price": "0.99",
+        "group": "plastic_bag",
+        "groupName": "Plastic Bags"
+    },
+    {
+        "id": 3,
+        "name": "Brown Paper Bag",
+        "dimensions": "10x10x10cm",
+        "description": "A brown paper bag.",
+        "weight": "1kg",
+        "image": "./images/temp_brown_paper_bag.png",
+        "price": "0.99",
+        "group": "paper_bag",
+        "groupName": "Paper Bags"
+    },
+    {
+        "id": 4,
+        "name": "White Paper Bag",
+        "dimensions": "10x10x10cm",
+        "description": "A white paper bag.",
+        "weight": "1kg",
+        "image": "./images/temp_white_paper_bag.png",
+        "price": "0.99",
+        "group": "paper_bag",
+        "groupName": "Paper Bags"
+    },
+    {
+        "id": 5,
+        "name": "Black Paper Bag",
+        "dimensions": "10x10x10cm",
+        "description": "A black paper bag.",
+        "weight": "1kg",
+        "image": "./images/temp_black_paper_bag.png",
+        "price": "0.99",
+        "group": "paper_bag",
+        "groupName": "Paper Bags"
+    },
+    {
+        "id": 6,
+        "name": "White Styrofoam Cup",
+        "dimensions": "10x10x10cm",
+        "description": "A white styrofoam cup.",
+        "weight": "1kg",
+        "image": "./images/temp_white_styrofoam_cup.png",
+        "price": "0.99",
+        "group": "styrofoam_cup",
+        "groupName": "Styrofoam Cups"
+    },
+    {
+        "id": 7,
+        "name": "Brown Styrofoam Cup",
+        "dimensions": "10x10x10cm",
+        "description": "A brown styrofoam cup.",
+        "weight": "1kg",
+        "image": "./images/temp_brown_styrofoam_cup.png",
+        "price": "0.99",
+        "group": "styrofoam_cup",
+        "groupName": "Styrofoam Cups"
+    },
+    {
+        "id": 8,
+        "name": "Large Plastic Cup",
+        "dimensions": "10x10x10cm",
+        "description": "A large plastic cup.",
+        "weight": "1kg",
+        "image": "./images/temp_large_plastic_cup.png",
+        "price": "0.99",
+        "group": "plastic_cup",
+        "groupName": "Plastic Cups"
+    },
+    {
+        "id": 9,
+        "name": "Medium Plastic Cup",
+        "dimensions": "10x10x10cm",
+        "description": "A medium plastic cup.",
+        "weight": "1kg",
+        "image": "./images/temp_medium_plastic_cup.png",
+        "price": "0.99",
+        "group": "plastic_cup",
+        "groupName": "Plastic Cups"
+    },
+    {
+        "id": 10,
+        "name": "Small Plastic Cup",
+        "dimensions": "10x10x10cm",
+        "description": "A small plastic cup.",
+        "weight": "1kg",
+        "image": "./images/temp_small_plastic_cup.png",
+        "price": "0.99",
+        "group": "plastic_cup",
+        "groupName": "Plastic Cups"
+    },
+    {
+        "id": 11,
+        "name": "Product 11",
+        "dimensions": "10x10x10cm",
+        "description": "Lorem ipsum vi firtae fom ex infil ibra conful.",
+        "weight": "1kg",
+        "image": "",
+        "price": "0.99",
+        "group": "C",
+        "groupName": "Group C"
+    },
+    {
+        "id": 12,
+        "name": "Product 12",
+        "dimensions": "10x10x10cm",
+        "description": "Lorem ipsum vi firtae fom ex infil ibra conful.",
+        "weight": "1kg",
+        "image": "",
+        "price": "0.99",
+        "group": "A",
+        "groupName": "Group A"
+    },
+    {
+        "id": 13,
+        "name": "Product 13",
+        "dimensions": "10x10x10cm",
+        "description": "Lorem ipsum vi firtae fom ex infil ibra conful.",
+        "weight": "1kg",
+        "image": "",
+        "price": "0.99",
+        "group": "B",
+        "groupName": "Group B"
+    },
+    {
+        "id": 14,
+        "name": "Product 14",
+        "dimensions": "10x10x10cm",
+        "description": "Lorem ipsum vi firtae fom ex infil ibra conful.",
+        "weight": "1kg",
+        "image": "",
+        "price": "0.99",
+        "group": "C",
+        "groupName": "Group C"
+    },
+    {
+        "id": 15,
+        "name": "Product 15",
+        "dimensions": "10x10x10cm",
+        "description": "Lorem ipsum vi firtae fom ex infil ibra conful.",
+        "weight": "1kg",
+        "image": "",
+        "price": "0.99",
+        "group": "A",
+        "groupName": "Group A"
+    },
+    {
+        "id": 16,
+        "name": "Product 16",
+        "dimensions": "10x10x10cm",
+        "description": "Lorem ipsum vi firtae fom ex infil ibra conful.",
+        "weight": "1kg",
+        "image": "",
+        "price": "0.99",
+        "group": "B",
+        "groupName": "Group B"
+    },
+    {
+        "id": 17,
+        "name": "Product 17",
+        "dimensions": "10x10x10cm",
+        "description": "Lorem ipsum vi firtae fom ex infil ibra conful.",
+        "weight": "1kg",
+        "image": "",
+        "price": "0.99",
+        "group": "C",
+        "groupName": "Group C"
+    },
+    {
+        "id": 18,
+        "name": "Product 18",
+        "dimensions": "10x10x10cm",
+        "description": "Lorem ipsum vi firtae fom ex infil ibra conful.",
+        "weight": "1kg",
+        "image": "",
+        "price": "0.99",
+        "group": "A",
+        "groupName": "Group A"
+    },
+    {
+        "id": 19,
+        "name": "Product 19",
+        "dimensions": "10x10x10cm",
+        "description": "Lorem ipsum vi firtae fom ex infil ibra conful.",
+        "weight": "1kg",
+        "image": "",
+        "price": "0.99",
+        "group": "B",
+        "groupName": "Group B"
+    },
+    {
+        "id": 20,
+        "name": "Product 20",
+        "dimensions": "10x10x10cm",
+        "description": "Lorem ipsum vi firtae fom ex infil ibra conful.",
+        "weight": "1kg",
+        "image": "",
+        "price": "0.99",
+        "group": "B",
+        "groupName": "Group B"
+    }
+]

@@ -1,9 +1,4 @@
-:root{
-    --bright-colour: #fff;
-    --mid-colour: #ececec;
 
-    
-}
 
 .pageContainer{
     background-color: var(--mid-colour);

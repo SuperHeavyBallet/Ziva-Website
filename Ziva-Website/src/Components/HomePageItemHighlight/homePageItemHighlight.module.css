@@ -11,3 +11,10 @@
     align-items: center;
 
 }
+
+.homePageHighlightItem{
+    border: 1px dashed var(--dark-colour);
+
+    margin: 1vh;
+    padding: 1vh;
+}

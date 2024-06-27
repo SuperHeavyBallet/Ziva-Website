@@ -1,13 +1,35 @@
-:root{
-    --bright-colour: #fff;
-    --mid-colour: #ececec;
 
-    
-}
 
 .pageContainer{
     background-color: var(--mid-colour);
     width: 100vw;
     height: 100vh;
-    padding-top: 5vh;
+    padding-top: 7vh;
+
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: center;
+}
+
+@media (min-width: 100vw) {
+
+    .pageContainer{
+        width: calc(100vw - 17px);
+    }
+}
+
+.leftMenu{
+    border: 1px dashed var(--dark-colour);
+    width: 10vw;
+}
+
+.centreSection{
+    border: 1px dashed var(--dark-colour);
+    width: 30vw;
+}
+
+.rightSection{
+    border: 1px dashed var(--dark-colour);
+    width: 10vw;
 }
