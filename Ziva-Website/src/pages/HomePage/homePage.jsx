@@ -5,6 +5,7 @@ import HomePageItemHighlight from "../../Components/HomePageItemHighlight/homePa
 import bannerImage from "../../../public/images/tempBannerImage.png"
 import HomePageContactSection from "../../Components/HomePageContactSection/homePageContactSection"
 import products from "../../../public/products.json"
+import Footer from "../../Components/Footer/footer"
 
 
 export default function HomePage(){
@@ -21,7 +22,8 @@ export default function HomePage(){
                 highlightItems={products}
             />
             <HomePageContactSection />
-            Home Page!
+            
+            <Footer />
         </div>
     )
 }

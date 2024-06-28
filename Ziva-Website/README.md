@@ -19,6 +19,7 @@ TODO:
 - At least 20 items with rough, unique details
 
 # Implement Catalogue System
+- Switch "Catalogue" to "Products"
 - Build Sections
 - Decide Product Groups
 - Left Column Group Text
@@ -27,6 +28,7 @@ TODO:
 - # Add Details to Text Area
 - Centre Column Right - Vertical List all Items, Condensed view
 - # Add Preview Images
+- On Clicking Group > Reset to Page Top
 
 # Implement Search Bar
 - Add Visual

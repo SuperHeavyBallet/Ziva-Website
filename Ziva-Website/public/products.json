@@ -122,112 +122,101 @@
     },
     {
         "id": 11,
-        "name": "Product 11",
+        "name": "Large Plastic Food Container",
         "dimensions": "10x10x10cm",
-        "description": "Lorem ipsum vi firtae fom ex infil ibra conful.",
+        "description": "A large plastic food container.",
         "weight": "1kg",
-        "image": "",
+        "image": "./images/temp_large_plastic_food_container.png",
         "price": "0.99",
-        "group": "C",
-        "groupName": "Group C"
+        "group": "food_container",
+        "groupName": "Food Containers"
     },
     {
         "id": 12,
-        "name": "Product 12",
+        "name": "Medium Plastic Food Container",
         "dimensions": "10x10x10cm",
-        "description": "Lorem ipsum vi firtae fom ex infil ibra conful.",
+        "description": "A medium plastic food container.",
         "weight": "1kg",
-        "image": "",
+        "image": "./images/temp_medium_plastic_food_container.png",
         "price": "0.99",
-        "group": "A",
-        "groupName": "Group A"
+        "group": "food_container",
+        "groupName": "Food Containers"
     },
     {
         "id": 13,
-        "name": "Product 13",
+        "name": "Small Plastic Food Container",
         "dimensions": "10x10x10cm",
-        "description": "Lorem ipsum vi firtae fom ex infil ibra conful.",
+        "description": "A small plastic food container.",
         "weight": "1kg",
-        "image": "",
+        "image": "./images/temp_small_plastic_food_container.png",
         "price": "0.99",
-        "group": "B",
-        "groupName": "Group B"
+        "group": "food_container",
+        "groupName": "Food Containers"
     },
     {
         "id": 14,
-        "name": "Product 14",
+        "name": "Saran Wrap",
         "dimensions": "10x10x10cm",
-        "description": "Lorem ipsum vi firtae fom ex infil ibra conful.",
+        "description": "A roll of saran wrap.",
         "weight": "1kg",
-        "image": "",
+        "image": "./images/temp_saran_wrap.png",
         "price": "0.99",
-        "group": "C",
-        "groupName": "Group C"
+        "group": "foil",
+        "groupName": "Foils"
     },
     {
         "id": 15,
-        "name": "Product 15",
+        "name": "Aluminium Foil",
         "dimensions": "10x10x10cm",
-        "description": "Lorem ipsum vi firtae fom ex infil ibra conful.",
+        "description": "A roll of aluminium foil.",
         "weight": "1kg",
-        "image": "",
+        "image": "./images/temp_aluminium_foil.png",
         "price": "0.99",
-        "group": "A",
-        "groupName": "Group A"
+        "group": "foil",
+        "groupName": "Foils"
     },
     {
         "id": 16,
-        "name": "Product 16",
+        "name": "Wet Tissue",
         "dimensions": "10x10x10cm",
-        "description": "Lorem ipsum vi firtae fom ex infil ibra conful.",
+        "description": "A multi pack of wet tissues.",
         "weight": "1kg",
-        "image": "",
+        "image": "./images/temp_wet_tissue.png",
         "price": "0.99",
-        "group": "B",
-        "groupName": "Group B"
+        "group": "tissue",
+        "groupName": "Tissues"
     },
     {
         "id": 17,
-        "name": "Product 17",
+        "name": "Hand Tissue",
         "dimensions": "10x10x10cm",
-        "description": "Lorem ipsum vi firtae fom ex infil ibra conful.",
+        "description": "A multi pack of hand tissues.",
         "weight": "1kg",
-        "image": "",
+        "image": "./images/temp_hand_tissue.png",
         "price": "0.99",
-        "group": "C",
-        "groupName": "Group C"
+        "group": "tissue",
+        "groupName": "Tissues"
     },
     {
         "id": 18,
-        "name": "Product 18",
+        "name": "Toilet Tissue",
         "dimensions": "10x10x10cm",
-        "description": "Lorem ipsum vi firtae fom ex infil ibra conful.",
+        "description": "A multi pack of toilet tissues.",
         "weight": "1kg",
-        "image": "",
+        "image": "./images/temp_toilet_tissue.png",
         "price": "0.99",
-        "group": "A",
-        "groupName": "Group A"
+        "group": "tissue",
+        "groupName": "Tissues"
     },
     {
         "id": 19,
-        "name": "Product 19",
+        "name": "Kitchen Tissue",
         "dimensions": "10x10x10cm",
-        "description": "Lorem ipsum vi firtae fom ex infil ibra conful.",
+        "description": "A multi pack of kitchen tissues.",
         "weight": "1kg",
-        "image": "",
+        "image": "./images/temp_kitchen_tissue.png",
         "price": "0.99",
-        "group": "B",
-        "groupName": "Group B"
-    },
-    {
-        "id": 20,
-        "name": "Product 20",
-        "dimensions": "10x10x10cm",
-        "description": "Lorem ipsum vi firtae fom ex infil ibra conful.",
-        "weight": "1kg",
-        "image": "",
-        "price": "0.99",
-        "group": "B",
-        "groupName": "Group B"
+        "group": "tissue",
+        "groupName": "Tissues"
     }
 ]

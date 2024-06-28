@@ -21,7 +21,7 @@ export default function VerticalTextMenu(
     }
 
     return(
-        <div>
+        <div className={styles.groupSection}>
             <h4
                 className={styles.groupTitle}
                 onClick={() => handleGroupClick()}

@@ -1,0 +1,7 @@
+.footerContainer{
+    width: 100%;
+    background-color: var(--dark-colour);
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+}

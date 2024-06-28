@@ -1,0 +1,24 @@
+
+
+.pageContainer{
+    background-color: var(--off-bright-colour);
+    width: 100vw;
+    height: 100vh;
+    padding-top: 7vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+}
+
+@media (min-width: 100vw) {
+
+    .pageContainer{
+        width: calc(100vw - 17px);
+    }
+}
+
+.centreSection{
+    height: 100%;
+}

@@ -11,19 +11,23 @@ export default function VerticalPreviewMenu( {inputItems, groupTitle, filterGrou
     }
 
     return(
-        <div className={styles.verticalPreviewMenuContainier}>
-            <div>{groupTitle}</div>
-            <ul>
+        <div className={styles.verticalPreviewMenuContainer}>
+            <h4>{groupTitle}</h4>
+            <div>
                 {filteredItems.map(item => (
-                    
-                    <li
+                    <div className={styles.previewItem}
+                    onClick={() => handleItemClick(item.id)}>
+                        <div
                         key={item.id} 
                         className={styles.verticalPreviewMenuElement}
-                        onClick={() => handleItemClick(item.id)}
-                    >{item.name}</li>
+                        
+                        >{item.name}</div>
+                        <img src={item.image}></img>
+                    </div>
+                    
                     
                 ))}
-            </ul>
+            </div>
         </div>
     )
 }

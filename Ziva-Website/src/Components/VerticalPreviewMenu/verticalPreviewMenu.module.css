@@ -1,0 +1,31 @@
+.verticalPreviewMenuContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    padding: none;
+    margin: none;
+}
+
+.verticalPreviewMenuContainer > h4{
+    padding: none;
+    margin: none;
+}
+
+.previewItem{
+    max-width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2vh;
+    padding-bottom: 2vh;
+}
+
+.previewItem:hover{
+    cursor: pointer;
+    
+}
+
+.previewItem img{
+    width: 150px;
+}
