@@ -3,6 +3,7 @@ import NavBar from "../../Components/NavBar/navBar";
 import styles from "./aboutUsPage.module.css"
 import bannerImage from "../../../public/images/tempBannerImage.png"
 import Footer from "../../Components/Footer/footer";
+import HomePageContactSection from "../../Components/HomePageContactSection/homePageContactSection";
 
 export default function AboutUsPage()
 {
@@ -17,7 +18,11 @@ export default function AboutUsPage()
                 bannerImageSrc={bannerImage}
                 bannerText="Veros odus quintum fax niel et hadif qul far epo"
             />
+
+<HomePageContactSection />
             </div>
+
+            
 
             <Footer />
             
