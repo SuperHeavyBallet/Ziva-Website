@@ -13,7 +13,7 @@ export default function HomePageItemHighlight( {highlightItems})
             <div className={styles.homePageItemReel}>
                 {
                     selectedProducts.map(product => (
-                        <Link to={"/catalogue"}>
+                        <Link to={"/products"}>
                         <div className={styles.homePageHighlightItem}
                             key={product.id}>
                             <h3>{product.name}</h3>

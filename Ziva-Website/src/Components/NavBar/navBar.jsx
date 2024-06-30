@@ -10,8 +10,8 @@ export default function NavBar()
             <div>Home</div>
             </Link>
 
-            <Link to={"/catalogue"}>
-            <div>Catalogue</div>
+            <Link to={"/products"}>
+            <div>Products</div>
             </Link>
 
             <Link to={"/"}>

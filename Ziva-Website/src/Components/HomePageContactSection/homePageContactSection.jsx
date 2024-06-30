@@ -1,4 +1,6 @@
+import GoogleMapComponent from "../GoogleMap/googleMap"
 import styles from "./homePageContactSection.module.css"
+import tempMap from "../../../public/images/temp_map.png"
 
 export default function HomePageContactSection()
 {
@@ -15,7 +17,7 @@ export default function HomePageContactSection()
             </div>
 
             <div className={styles.homePageContactSectionMapArea}>
-            Map
+            <img src={tempMap}></img>
             </div>
         </div>
     )
