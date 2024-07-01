@@ -1,9 +1,18 @@
 import GoogleMapComponent from "../GoogleMap/googleMap"
 import styles from "./homePageContactSection.module.css"
 import tempMap from "../../../public/images/temp_map.png"
+import { useEffect } from "react"
+import loadMap from '../../Components/GoogleMap/googleMap.jsx';
 
 export default function HomePageContactSection()
 {
+
+    useEffect(() =>
+    {
+        loadMap();
+
+    }, []);
+
     return(
         <div className={styles.homePageContactSectionContainer}>
             
@@ -17,7 +26,7 @@ export default function HomePageContactSection()
             </div>
 
             <div className={styles.homePageContactSectionMapArea}>
-            <img src={tempMap}></img>
+            <GoogleMapComponent/>
             </div>
         </div>
     )

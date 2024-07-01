@@ -30,7 +30,10 @@
 
 .leftMenu{
 
-    border-right: 1px solid var(--dark-colour);
+    background-color: var(--bright-colour);
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 0px;
+
+    
     width: 10vw;
     margin: 0px 0.5vw;
     padding: 6vh 1vw 1vh 1vw;
@@ -49,7 +52,7 @@
 }
 
 .rightSection{
-    border-left: 1px solid var(--dark-colour);
+    
     
     
     width: 10vw;

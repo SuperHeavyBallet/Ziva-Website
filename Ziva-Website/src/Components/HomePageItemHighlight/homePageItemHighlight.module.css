@@ -2,7 +2,8 @@
 
 .homePageItemHighlightContainer{
     background-color: var(--bright-colour);
-    border: 1px dashed var(--dark-colour);
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 0px;
+    
     margin: 1vh 2vw;
     padding: 1vh 2vw;
     display: flex;

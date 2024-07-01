@@ -1,19 +1,18 @@
-:root{
-    --bright-colour: #fff;
-    --off-bright-colour:  #f3f3f3;
-    --mid-colour: #ececec;
-    --dark-colour: #999999;
-}
+
 
 .heroBannerContainer{
 
-    border: 1px dashed var(--dark-colour);
+
+    background-color: var(--bright-colour);
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 0px;
+    
     margin: 1vh 2vw;
     padding: 1vh 2vw;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    
 
 }
 

@@ -1,7 +1,4 @@
-:root{
-    --bright-colour: #fff;
-    --mid-colour: #ececec;
-}
+
 
 .navBar{
     width: 100vw;
@@ -19,17 +16,34 @@
     top: 0;
     left: 0;
     z-index: 1000;
+    
    
 }
+
+.navBarLink{
+    color: var(--dark-colour);
+    
+    border-radius: 15px;
+    padding: 0.3vh 0.5vw;
+}
+
+.navBarLink:hover{
+    background-color: var(--mid-colour);
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 0px;
+}
+
 
 .searchBar{
    display: flex;
    flex-direction: row;
    align-items: center;
+
+   border-radius: 15px;
+   background-color: var(--dark-colour);
 }
 
 .searchBar input{
-    border-radius: 8px;
+    border-radius: 15px 0 0 15px;
     border: 1px solid var(--dark-colour);
     background-color: var(--mid-colour);
     padding-left: 0.5vw;
@@ -41,4 +55,6 @@
     max-height: 20px;
     max-width: 20px;
     margin-left: 0.5vw;
+    margin-right: 0.5vw;
+    color: white;
 }

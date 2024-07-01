@@ -5,23 +5,23 @@ export default function NavBar()
 {
     return(
         <div className={styles.navBar}>
-            NavBar
+            <h3>COMPANY</h3>
             <Link to={"/"}>
-            <div>Home</div>
+            <div className={styles.navBarLink}>Home</div>
             </Link>
 
             <Link to={"/products"}>
-            <div>Products</div>
+            <div className={styles.navBarLink}>Products</div>
             </Link>
 
-            <Link to={"/"}>
+           
                 <div className={styles.searchBar}>
                 <input
                         type="text"
                         placeholder="Search..."
                     ></input>
                     <svg
-                    fill="#000000" height="800px" width="800px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+                    fill="#FFF" height="800px" width="800px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
 	                    viewBox="0 0 488.4 488.4" xml:space="preserve">
                     <g>
 	                    <g>
@@ -34,10 +34,10 @@ export default function NavBar()
                     </svg>
                     
                 </div>
-            </Link>
+           
 
             <Link to={"/about"}>
-            <div>About Us</div>
+            <div className={styles.navBarLink}>About Us</div>
             </Link>
 
         </div>
