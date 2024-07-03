@@ -8,6 +8,8 @@ import AboutUsPage from './pages/AboutUsPage/aboutUsPage'
 
 import './index.css'
 
+
+
 const router = createBrowserRouter([
   {
     path: "/",
