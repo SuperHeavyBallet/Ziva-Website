@@ -1,14 +1,17 @@
 TODO:
 
 # Today
+- Small Company Description
+- Work on HomePage Banner Layout
+- Highlight Items - On New set loaded, animate scale up>down one by one before next set load
 
-- Update Homepage Highlight CSS
-- Homepage Highlight Lateral Scroll Animation - maybe scroll through whole product list or condense
+
 
 
 # Fill Basic Content
 - Home Page:
-- Implement Highlight Block Scroll Animation
+- Highlight Items Scroll, test translate move item
+- Highlight Items - On New set loaded, animate scale up>down one by one before next set load
 
 
 # Implement Google Maps API
@@ -62,3 +65,5 @@ Catalogue Page sends that Product id to Centre Display
 - //Add Phone Number//
 - //Add Google Map //(Temp Image)//
 - //Add Footer with brief contact details//
+- //Update Homepage Highlight CSS
+- //Homepage Highlight Lateral Scroll Animation - maybe scroll through whole product list or condense

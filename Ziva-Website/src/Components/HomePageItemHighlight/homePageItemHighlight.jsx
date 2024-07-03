@@ -6,32 +6,44 @@ import { useEffect, useId, useState } from "react";
 
 export default function HomePageItemHighlight( {highlightItems})
 {
-    const selectedProducts = highlightItems;
 
     const [ currentIndex, setCurrentIndex ] = useState(0);
+    const [ activeIndex, setActiveIndex ] = useState(0);
     const itemsPerPage = 4;
 
-    function chooseItemsToShow(numberOfItems)
+    function chooseItemsToShow()
     {
-  
-
         const newIndex = (currentIndex + itemsPerPage) % highlightItems.length;
         setCurrentIndex(newIndex);
-
-       
+        setActiveIndex(0); 
     }
 
-    const itemsToShow = highlightItems.slice(currentIndex, currentIndex + itemsPerPage).concat(
-        highlightItems.slice(0, Math.max(0, (currentIndex + itemsPerPage) - highlightItems.length))
+    const itemsToShow = 
+        highlightItems.slice(currentIndex, currentIndex + itemsPerPage)
+        .concat(
+        highlightItems.slice(0, Math.max(0, (currentIndex + itemsPerPage) 
+            - highlightItems.length))
     );
+
+
+    useEffect(() => {
+        const cycleActiveClass = setTimeout(() => {
+            setActiveIndex((prevIndex) => (prevIndex +1) % itemsPerPage);
+        }, 1000);
+
+        return () => clearTimeout(cycleActiveClass);
+    }, [activeIndex, itemsToShow]);
 
     useEffect(() => {
         const timer = setTimeout(() => {
             chooseItemsToShow();
-        }, 3000);
+
+        }, 4000);
 
         return () => clearTimeout(timer);
     }, [currentIndex]);
+
+    
 
 
     return(
@@ -41,8 +53,8 @@ export default function HomePageItemHighlight( {highlightItems})
                 {
                     itemsToShow.map((product, index) => (
                         
-                        <div className={styles.homePageHighlightItem}
-                        onClick={() => chooseItemsToShow()}
+                        <div className={
+                            `${styles.homePageHighlightItem} ${index === activeIndex ? styles.activeClass : ''}`}
                             key={index}>
                                 <Link to={"/products"}
                                 className={styles.link}

@@ -1,0 +1,27 @@
+.aboutUsBannerContainer{
+    background-color: var(--bright-colour);
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 0px;
+    
+    margin: 1vh 2vw;
+    padding: 1vh 2vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.aboutUsBannerTextArea{
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    padding: 1vh 1vw 3vh 1vw;
+}
+
+.aboutUsBannerTextArea h3{
+    text-align: center;
+}
+
+.aboutUsBannerTextArea p{
+    margin: 1vh 1vw;
+    padding: 0;
+}
