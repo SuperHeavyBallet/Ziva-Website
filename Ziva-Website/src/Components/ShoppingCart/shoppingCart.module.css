@@ -1,0 +1,9 @@
+.shoppingCartContainer{
+    display: flex;
+    flex-direction: column;
+}
+
+.shoppingCartItems{
+    display: flex;
+    flex-direction: column;
+}

@@ -6,10 +6,18 @@ import bannerImage from "../../../public/images/tempBannerImage.png"
 import HomePageContactSection from "../../Components/HomePageContactSection/homePageContactSection"
 import products from "../../../public/products.json"
 import Footer from "../../Components/Footer/footer"
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import ShoppingCart from "../../Components/ShoppingCart/shoppingCart"
 
 
 export default function HomePage(){
+
+    const [ currentCartContents, setCurrentCartContents ] = useState([]);
+
+    function updateShoppingCart(itemToAdd)
+    {
+        setCurrentCartContents(...currentCartContents, itemToAdd);
+    }
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -29,6 +37,10 @@ export default function HomePage(){
                 highlightItems={products}
             />
             <HomePageContactSection />
+
+            <ShoppingCart 
+                cartContents={currentCartContents}
+            />
 
             </div>
             

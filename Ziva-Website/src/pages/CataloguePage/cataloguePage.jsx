@@ -6,8 +6,9 @@ import VerticalPreviewMenu from "../../Components/VerticalPreviewMenu/verticalPr
 import ItemView from "../../Components/ItemView/itemView"
 import { useState, useEffect } from "react"
 import Footer from "../../Components/Footer/footer"
+import ShoppingCart from "../../Components/ShoppingCart/shoppingCart"
 
-export default function CataloguePage()
+export default function CataloguePage( {updateShoppingCartContents})
 {
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -39,6 +40,20 @@ export default function CataloguePage()
         window.scrollTo(0, 0);
     }
 
+    const [ currentCartContents, setCurrentCartContents ] = useState([]);
+
+    function updateShoppingCart(itemToAdd)
+    {
+        setCurrentCartContents([...currentCartContents, itemToAdd.name]);
+
+    }
+
+    useEffect(() =>
+    {
+        updateShoppingCart(currentCartContents);
+    }, [currentCartContents]);
+
+
     return(
         <div className={styles.pageContainer}>
             <NavBar />
@@ -62,7 +77,13 @@ export default function CataloguePage()
             <div className={styles.centreSection}>
                 <ItemView 
                     selectedItem={itemToDisplay}
+                    onClickAddToCart={(itemToAdd) => updateShoppingCart(itemToAdd)}
                 />
+
+<ShoppingCart 
+                cartContents={currentCartContents}
+                
+            />
             </div>
             
             <div className={styles.rightSection}>
@@ -74,6 +95,8 @@ export default function CataloguePage()
                 />
             </div>
             </div>
+
+           
             <Footer />
 
         </div>

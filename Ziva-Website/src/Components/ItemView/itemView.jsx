@@ -1,7 +1,12 @@
 import styles from "./itemView.module.css"
 
-export default function ItemView( {selectedItem})
+export default function ItemView( {selectedItem, onClickAddToCart})
 {
+
+    function addToCart()
+    {
+        onClickAddToCart(selectedItem);
+    }
     return(
         <div className={styles.itemViewContainer}>
             <h3>{selectedItem.name}</h3>
@@ -10,6 +15,7 @@ export default function ItemView( {selectedItem})
             <p>Dimensions: {selectedItem.dimensions}</p>
             <p>Weight: {selectedItem.weight}</p>
             <p>{selectedItem.description}</p>
+            <button onClick={() => addToCart()}>Add To Cart</button>
             </div>
     )
 }

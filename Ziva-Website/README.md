@@ -1,17 +1,15 @@
 TODO:
 
 # Today
-- Small Company Description
-- Work on HomePage Banner Layout
-- Highlight Items - On New set loaded, animate scale up>down one by one before next set load
 
+- Work on HomePage Banner Layout
+- Add to Cart option
+- Create shoping cart list
 
 
 
 # Fill Basic Content
-- Home Page:
-- Highlight Items Scroll, test translate move item
-- Highlight Items - On New set loaded, animate scale up>down one by one before next set load
+
 
 
 # Implement Google Maps API
@@ -24,14 +22,20 @@ TODO:
 - Centre Column Group Display
 
 
+
+# Add Email Submission
+- Send cart list to email
+- Add email submit form
+
+
 # Implement Search Bar
 - Add Function => https://blog.hubspot.com/website/search-bar-design
 
-# Add About Us
-- Small Company Description
+# About Us
 
 
-# Add Email Submission
+
+
 
 Right should contain list of every product within a selected group
 New Vertical Menu type, small image, text and price
@@ -39,10 +43,16 @@ Click element in Vertical Menu, send that Product via id to Catalogue Page
 Catalogue Page sends that Product id to Centre Display
 
 # Completed
+
+# Home Page
+- //Small Company Description
+- //Highlight Items - On New set loaded, animate scale up>down one by one before next set load
+
 # Implement Search Bar
 - //Add Visual//
 # Add About Us
 - //Contact Details
+- //Small Company Description
 
 # Implement Catalogue System
 - //Switch "Catalogue" to "Products"//
