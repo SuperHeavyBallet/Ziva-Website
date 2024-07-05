@@ -8,6 +8,7 @@ import products from "../../../public/products.json"
 import Footer from "../../Components/Footer/footer"
 import { useEffect, useState } from "react";
 import ShoppingCart from "../../Components/ShoppingCart/shoppingCart"
+import Button from "../../Components/Button/button"
 
 
 export default function HomePage(){
@@ -20,8 +21,13 @@ export default function HomePage(){
     }
 
     useEffect(() => {
-        window.scrollTo(0, 0);
+        backToTop();
       }, []);
+
+      function backToTop()
+      {
+        window.scrollTo(0, 0);
+      }
 
     return(
         <div className={styles.pageContainer}>
@@ -44,6 +50,11 @@ export default function HomePage(){
 
             </div>
             
+        <Button 
+            buttonText="Back to top"
+            buttonFunction={() => backToTop()}
+        />
+
             <Footer />
         </div>
     )

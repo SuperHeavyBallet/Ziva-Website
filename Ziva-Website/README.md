@@ -3,9 +3,10 @@ TODO:
 # Today
 
 - Work on HomePage Banner Layout
-- Add to Cart option
+
 - Create shoping cart list
 
+- Try Horizontal Top Menu with highest heirarchy groups > drop down menu rather than vertical
 
 
 # Fill Basic Content
@@ -77,3 +78,6 @@ Catalogue Page sends that Product id to Centre Display
 - //Add Footer with brief contact details//
 - //Update Homepage Highlight CSS
 - //Homepage Highlight Lateral Scroll Animation - maybe scroll through whole product list or condense
+
+- //Add Back to Top button at base of every page//
+- //Add to Cart option//

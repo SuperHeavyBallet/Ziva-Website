@@ -6,6 +6,7 @@ import Footer from "../../Components/Footer/footer";
 import HomePageContactSection from "../../Components/HomePageContactSection/homePageContactSection";
 import { useEffect } from "react";
 import AboutUsBanner from "../../Components/AboutUsBanner/aboutUsBanner";
+import Button from "../../Components/Button/button";
 
 export default function AboutUsPage()
 {
@@ -19,8 +20,13 @@ export default function AboutUsPage()
     }
 
     useEffect(() => {
-        window.scrollTo(0, 0);
+        backToTop();
       }, []);
+
+      function backToTop()
+      {
+        window.scrollTo(0, 0);
+      }
 
     return(
         <div className={styles.pageContainer}>
@@ -36,7 +42,10 @@ export default function AboutUsPage()
                 <HomePageContactSection />
             </div>
 
-            
+            <Button 
+            buttonText="Back to top"
+            buttonFunction={() => backToTop()}
+        />
 
             <Footer />
             

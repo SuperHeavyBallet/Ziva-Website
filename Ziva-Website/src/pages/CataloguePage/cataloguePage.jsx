@@ -7,16 +7,22 @@ import ItemView from "../../Components/ItemView/itemView"
 import { useState, useEffect } from "react"
 import Footer from "../../Components/Footer/footer"
 import ShoppingCart from "../../Components/ShoppingCart/shoppingCart"
+import Button from "../../Components/Button/button"
+
 
 export default function CataloguePage( {updateShoppingCartContents})
 {
     useEffect(() => {
-        window.scrollTo(0, 0);
+        backToTop();
       }, []);
 
+      function backToTop()
+      {
+        window.scrollTo(0, 0);
+      }
     const uniqueGroups = Array.from(new Map(products.map(item => [item.group, item.groupName])).entries()).map(([group, groupName]) => ({ group, groupName }));
 
-    console.log(uniqueGroups);
+   
 
     
     const [ groupToDisplay, setGroupToDisplay ] = useState(products[0].group)
@@ -50,7 +56,7 @@ export default function CataloguePage( {updateShoppingCartContents})
 
     useEffect(() =>
     {
-        updateShoppingCart(currentCartContents);
+        //updateShoppingCartContents(currentCartContents);
     }, [currentCartContents]);
 
 
@@ -96,7 +102,10 @@ export default function CataloguePage( {updateShoppingCartContents})
             </div>
             </div>
 
-           
+            <Button 
+            buttonText="Back to top"
+            buttonFunction={() => backToTop()}
+        />
             <Footer />
 
         </div>

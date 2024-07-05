@@ -3,12 +3,30 @@
     margin-bottom: 2vh;
 }
 
+.groupTitleArea{
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    align-items: center;
+}
+
+.groupTitleArea svg{
+    height: 15px;
+    justify-content: end;
+    margin: 0 0.5vw;
+    padding: 0;
+    width: fit-content;
+
+}
+
 .groupTitle{
     margin: 0;
     padding: 0;
 }
 
-.groupTitle:hover{
+.groupTitleArea:hover{
     cursor: pointer;
 }
 
@@ -25,4 +43,12 @@
     cursor: pointer;
     background-color: var(--off-bright-colour);
     list-style: disc;
+}
+
+.hidden{
+    display: none;
+}
+
+.visible{
+    display: block;
 }
