@@ -11,6 +11,7 @@ import ShoppingCart from "../../Components/ShoppingCart/shoppingCart"
 import Button from "../../Components/Button/button"
 
 
+
 export default function HomePage(){
 
     const [ currentCartContents, setCurrentCartContents ] = useState([]);
@@ -33,9 +34,15 @@ export default function HomePage(){
         <div className={styles.pageContainer}>
             <NavBar />
 
+            <div className={styles.cataloguePageTopBanner}>
+                Add Items To Your Shopping List and Send an Email Enquiry!
+
+            </div>
+
+            
             <div className={styles.centreSection}>
             <HeroBanner
-                bannerTitle="Banner Title"
+                bannerTitle="ZIVA KOMERC"
                 bannerImageSrc={bannerImage}
                 bannerText="Veros odus quintum fax niel et hadif qul far epo"
             />

@@ -42,17 +42,25 @@
     justify-content: space-around;
     align-items: center;
     height: 5vh;
+    padding: 0;
+}
+
+.navBarSecondRow h3{
+    margin: 0;
+    padding: 0;
 }
 
 .navBarLink{
     color: var(--dark-colour);
+    padding: 1vh 1vw;
+    height: 100%;
     
-    border-radius: 15px;
-    padding: 0.3vh 0.5vw;
+   
 }
 
 .navBarLink:hover{
     background-color: var(--mid-colour);
+   
 }
 
 

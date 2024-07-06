@@ -63,7 +63,14 @@ export default function CataloguePage( {updateShoppingCartContents})
     return(
         <div className={styles.pageContainer}>
             <NavBar />
+
+            <div className={styles.cataloguePageTopBanner}>
+                Add Items To Your Shopping List and Send an Email Enquiry!
+
+            </div>
         <div className={styles.cataloguePageContent}>
+
+            
             <div className={styles.leftMenu}>
 
             {

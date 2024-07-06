@@ -20,7 +20,7 @@ export default function NavBar()
                 </div>
 
             <div className={styles.navBarSecondRow}>
-            <h3>COMPANY</h3>
+            <h3>ZIVA KOMERC</h3>
             <Link to={"/"}>
             <div className={styles.navBarLink}>Home</div>
             </Link>

@@ -9,7 +9,9 @@ export default function HomePageItemHighlight( {highlightItems})
 
     const [ currentIndex, setCurrentIndex ] = useState(0);
     const [ activeIndex, setActiveIndex ] = useState(0);
-    const itemsPerPage = 4;
+    const itemsPerPage = 6;
+    const timeBeforeReload = itemsPerPage * 1000;
+    const timeBeforeItemAdvance = timeBeforeReload / itemsPerPage;
 
     function chooseItemsToShow()
     {
@@ -29,7 +31,7 @@ export default function HomePageItemHighlight( {highlightItems})
     useEffect(() => {
         const cycleActiveClass = setTimeout(() => {
             setActiveIndex((prevIndex) => (prevIndex +1) % itemsPerPage);
-        }, 1000);
+        }, timeBeforeItemAdvance);
 
         return () => clearTimeout(cycleActiveClass);
     }, [activeIndex, itemsToShow]);
@@ -38,7 +40,7 @@ export default function HomePageItemHighlight( {highlightItems})
         const timer = setTimeout(() => {
             chooseItemsToShow();
 
-        }, 4000);
+        }, timeBeforeReload);
 
         return () => clearTimeout(timer);
     }, [currentIndex]);
