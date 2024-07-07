@@ -3,9 +3,7 @@ TODO:
 # Today
 
 
-- Work on search bar
---- Create Module
---- Make it take in input value and output via Window Alert the value
+
 - Work on Top Banner
 --- Make a module
 --- Fix excessive width, overspilling
@@ -88,3 +86,7 @@ Catalogue Page sends that Product id to Centre Display
 - //Add Back to Top button at base of every page//
 - //Add to Cart option//
 - //Work on HomePage Banner Layout//
+
+- Work on search bar
+--- //Create Module//
+--- //Make it take in input value and output via Window Alert the value//

@@ -1,0 +1,33 @@
+.searchBar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+ 
+    border-radius: 15px;
+    background-color: var(--dark-colour);
+ }
+ 
+ .searchBar input{
+     border-radius: 15px 0 0 15px;
+     border: 1px solid var(--dark-colour);
+     background-color: var(--mid-colour);
+     padding-left: 0.5vw;
+     height: 2em;
+     width: 20em;
+ }
+
+ .searchButton:hover{
+    cursor: pointer;
+ }
+ 
+ .searchButton  svg{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+     max-height: 20px;
+     max-width: 20px;
+     margin-left: 0.5vw;
+     margin-right: 0.5vw;
+     color: white;
+ }
