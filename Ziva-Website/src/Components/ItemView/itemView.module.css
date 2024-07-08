@@ -3,9 +3,25 @@
 
     background-color: var(--bright-colour);
     box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 0px;
+    display: flex;
+    flex-direction: row;
 }
 
-.itemViewContainer img{
+
+
+.imageSection{
+    max-width: 300px;
+    
+    padding: 1vh 1vw;
+}
+
+.imageSection img{
     width: 100%;
     object-fit: cover;
+}
+
+.textSection{
+    max-width: 300px;
+   
+    padding: 1vh 1vw;
 }

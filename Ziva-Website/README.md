@@ -4,11 +4,15 @@ TODO:
 
 
 
-- Work on Top Banner
---- Make a module
---- Fix excessive width, overspilling
+
 
 - Create shoping cart list
+- Add Remove Item from List
+- Add Quantity Counter to Item
+- Add Price Display x Quantity
+- Add quantity adjuster
+
+
 
 - Try Horizontal Top Menu with highest heirarchy groups > drop down menu rather than vertical
 
@@ -47,7 +51,7 @@ New Vertical Menu type, small image, text and price
 Click element in Vertical Menu, send that Product via id to Catalogue Page
 Catalogue Page sends that Product id to Centre Display
 
-# Completed
+###### Completed ##########################################
 
 # Home Page
 - //Small Company Description
@@ -90,3 +94,7 @@ Catalogue Page sends that Product id to Centre Display
 - Work on search bar
 --- //Create Module//
 --- //Make it take in input value and output via Window Alert the value//
+
+- Work on Top Banner
+--- //Make a module//
+--- //Fix excessive width, overspilling//

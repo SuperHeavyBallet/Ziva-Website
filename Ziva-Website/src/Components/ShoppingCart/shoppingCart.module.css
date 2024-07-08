@@ -1,9 +1,32 @@
 .shoppingCartContainer{
     display: flex;
     flex-direction: column;
+
+    background-color: var(--bright-colour);
+    width: 100%;
+    margin: 1vh 0;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 0px;
+
 }
 
 .shoppingCartItems{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    margin: 1vh 1vw;
+}
+
+.shoppingCartEachItem{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    margin: 0.5vh 0.5vw;
+    background-color: var(--off-bright-colour);
+    width: 100%;
+}
+.shoppingCartImage{
+    max-width: 60px;
+    padding: 0 1vw 0 0;
 }

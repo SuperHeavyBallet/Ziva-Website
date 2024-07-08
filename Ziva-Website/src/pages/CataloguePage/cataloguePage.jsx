@@ -51,7 +51,7 @@ export default function CataloguePage( {updateShoppingCartContents})
 
     function updateShoppingCart(itemToAdd)
     {
-        setCurrentCartContents([...currentCartContents, itemToAdd.name]);
+        setCurrentCartContents([...currentCartContents, itemToAdd]);
 
     }
 
@@ -96,7 +96,7 @@ export default function CataloguePage( {updateShoppingCartContents})
                     onClickAddToCart={(itemToAdd) => updateShoppingCart(itemToAdd)}
                 />
 
-<ShoppingCart 
+            <ShoppingCart 
                 cartContents={currentCartContents}
                 
             />
