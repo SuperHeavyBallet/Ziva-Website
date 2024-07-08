@@ -8,6 +8,7 @@ import { useState, useEffect } from "react"
 import Footer from "../../Components/Footer/footer"
 import ShoppingCart from "../../Components/ShoppingCart/shoppingCart"
 import Button from "../../Components/Button/button"
+import TopBanner from "../../Components/TopBanner/topBanner"
 
 
 export default function CataloguePage( {updateShoppingCartContents})
@@ -64,10 +65,12 @@ export default function CataloguePage( {updateShoppingCartContents})
         <div className={styles.pageContainer}>
             <NavBar />
 
-            <div className={styles.cataloguePageTopBanner}>
-                Add Items To Your Shopping List and Send an Email Enquiry!
+            <TopBanner 
+            className={styles.topBanner}
+            bannerText="Add Items To Your Shopping List and Send an Email Enquiry!"
+            />
 
-            </div>
+            
         <div className={styles.cataloguePageContent}>
 
             
