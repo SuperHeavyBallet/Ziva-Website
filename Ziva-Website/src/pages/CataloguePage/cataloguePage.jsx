@@ -51,8 +51,41 @@ export default function CataloguePage( {updateShoppingCartContents})
 
     function updateShoppingCart(itemToAdd)
     {
-        setCurrentCartContents([...currentCartContents, itemToAdd]);
+        itemToAdd.quantity = 1;
 
+        if (currentCartContents.find((item) => item.name === itemToAdd.name))
+        {
+
+            const index = currentCartContents.findIndex(item => item.name === itemToAdd.name);
+            let  updatedCartContents;
+
+            if (index !== -1) {
+                updatedCartContents = [...currentCartContents]; // Shallow copy of the array
+                updatedCartContents[index] = {
+                  ...updatedCartContents[index], // Copy the item to be updated
+                  quantity: updatedCartContents[index].quantity + itemToAdd.quantity // Update the quantity
+                  
+                };
+
+                setCurrentCartContents(updatedCartContents);
+
+               
+            }
+        }
+        else
+        {
+            setCurrentCartContents([...currentCartContents, itemToAdd]);
+        }
+        
+
+    }
+
+    function handleRemoveItem(item)
+    {
+       
+
+        const updatedShoppingCart = currentCartContents.filter(cartItem => cartItem.name !== item.name);
+        setCurrentCartContents(updatedShoppingCart);
     }
 
     useEffect(() =>
@@ -98,6 +131,7 @@ export default function CataloguePage( {updateShoppingCartContents})
 
             <ShoppingCart 
                 cartContents={currentCartContents}
+                onRemoveItem={(item) => handleRemoveItem(item)}
                 
             />
             </div>

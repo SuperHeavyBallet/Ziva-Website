@@ -1,13 +1,14 @@
 import { useEffect, useState } from "react";
 import styles from "./shoppingCart.module.css"
 
-export default function ShoppingCart( {cartContents} )
+export default function ShoppingCart( {cartContents, onRemoveItem} )
 {
     console.log(cartContents);
 
     function removeItem(item)
     {
-        window.alert(item.name);
+        
+        onRemoveItem(item);
     }
 
     return(
@@ -21,7 +22,13 @@ export default function ShoppingCart( {cartContents} )
                         <img className={styles.shoppingCartImage}
                         src={product.image}></img>
                        
+                       
                         {product.name}
+
+                        <div>
+                       x {product.quantity}
+                       </div>
+
                         <div onClick={() => removeItem(product)}>
                             Remove
                             </div>
