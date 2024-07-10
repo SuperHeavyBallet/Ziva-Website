@@ -132,6 +132,7 @@ export default function CataloguePage( {updateShoppingCartContents})
             <ShoppingCart 
                 cartContents={currentCartContents}
                 onRemoveItem={(item) => handleRemoveItem(item)}
+                itemClicked={(productID) => handleItemClicked(productID)}
                 
             />
             </div>

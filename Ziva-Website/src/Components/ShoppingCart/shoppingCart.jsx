@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import styles from "./shoppingCart.module.css"
 
-export default function ShoppingCart( {cartContents, onRemoveItem} )
+
+export default function ShoppingCart( {cartContents, onRemoveItem, itemClicked} )
 {
     console.log(cartContents);
 
@@ -9,6 +10,10 @@ export default function ShoppingCart( {cartContents, onRemoveItem} )
     {
         
         onRemoveItem(item);
+    }
+    function handleItemClicked(itemId)
+    {
+        itemClicked(itemId);
     }
 
     return(
@@ -18,8 +23,12 @@ export default function ShoppingCart( {cartContents, onRemoveItem} )
         <div className={styles.shoppingCartItems}>
             {
                 cartContents.map((product, index) => (
-                    <div className={styles.shoppingCartEachItem}>
+                    
+                    <div className={styles.shoppingCartEachItem}
+                    onClick={() => handleItemClicked(product.id)}
+                    >
                         <img className={styles.shoppingCartImage}
+                        
                         src={product.image}></img>
                        
                        
@@ -34,6 +43,7 @@ export default function ShoppingCart( {cartContents, onRemoveItem} )
                             Remove
                             </div>
                     </div>
+                    
                 ))
             }
             </div>
