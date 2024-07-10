@@ -6,11 +6,12 @@ TODO:
 
 
 
-- Create shoping cart list
-- Add Remove Item from List
-- Add Quantity Counter to Item
+- //Create shoping cart list//
+- //Add Remove Item from List//
+- //Add Quantity Counter to Item//
 - Add Price Display x Quantity
 - Add quantity adjuster
+- Add Link from shopping cart item to display the same item in main display
 
 
 

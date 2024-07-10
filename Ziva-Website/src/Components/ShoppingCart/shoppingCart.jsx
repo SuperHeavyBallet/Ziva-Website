@@ -27,6 +27,7 @@ export default function ShoppingCart( {cartContents, onRemoveItem} )
 
                         <div>
                        x {product.quantity}
+                       $: {(product.price * product.quantity).toFixed(2)}
                        </div>
 
                         <div onClick={() => removeItem(product)}>
