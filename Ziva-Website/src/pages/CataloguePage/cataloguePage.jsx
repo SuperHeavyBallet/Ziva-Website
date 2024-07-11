@@ -9,10 +9,16 @@ import Footer from "../../Components/Footer/footer"
 import ShoppingCart from "../../Components/ShoppingCart/shoppingCart"
 import Button from "../../Components/Button/button"
 import TopBanner from "../../Components/TopBanner/topBanner"
+import { useLocation } from "react-router-dom"
 
 
-export default function CataloguePage( {updateShoppingCartContents})
+export default function CataloguePage( {updateShoppingCartContents, incomingProductID})
 {
+    const location = useLocation();
+    const { productID } = location.state || {}; // Access the productID from the state
+    console.log("Product ID: ", productID);
+
+    
     useEffect(() => {
         backToTop();
       }, []);
@@ -28,7 +34,7 @@ export default function CataloguePage( {updateShoppingCartContents})
     
     const [ groupToDisplay, setGroupToDisplay ] = useState(products[0].group)
     const [ groupNameToDisplay, setGroupNameToDisplay ] = useState(products[0].groupName)
-    const [ itemToDisplay, setItemToDisplay ] = useState(products[0]);
+    const [ itemToDisplay, setItemToDisplay ] = useState(products[productID] || products[0]);
 
 
     function handleItemClicked(itemID)
@@ -107,8 +113,9 @@ export default function CataloguePage( {updateShoppingCartContents})
         <div className={styles.cataloguePageContent}>
 
             
+            
             <div className={styles.leftMenu}>
-
+            
             {
                 uniqueGroups.map(group => (
                     <VerticalTextMenu 

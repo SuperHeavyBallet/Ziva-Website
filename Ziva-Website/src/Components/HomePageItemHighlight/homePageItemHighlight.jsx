@@ -56,9 +56,10 @@ export default function HomePageItemHighlight( {highlightItems})
                     itemsToShow.map((product, index) => (
                         
                         <div className={
+                            
                             `${styles.homePageHighlightItem} ${index === activeIndex ? styles.activeClass : ''}`}
                             key={index}>
-                                <Link to={"/products"}
+                                <Link to="/products" state={{ productID: product.id }}
                                 className={styles.link}
                                 
                                 >

@@ -12,9 +12,12 @@ TODO:
 - Add Price Display x Quantity
 - Add quantity adjuster
 - //Add Link from shopping cart item to display the same item in main display//
-- Add HomePage Highlight function > Click item, load Catalogue with that item on display (Probably pass productID)
+- //Add HomePage Highlight function > Click item, load Catalogue with that item on display (Probably pass productID)// - Pass Product ID Through Link State + useLocation
 - Add persistant local storage for shopping cart contents
+- Create Profile Ability
 
+# Profile
+- History of Orders
 
 - Try Horizontal Top Menu with highest heirarchy groups > drop down menu rather than vertical
 
