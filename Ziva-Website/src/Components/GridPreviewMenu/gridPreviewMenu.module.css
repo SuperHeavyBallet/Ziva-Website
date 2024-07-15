@@ -1,0 +1,44 @@
+.gridPreviewMenuContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1vh 1vw;
+    margin: 1vh 1vw;
+
+    background-color: var(--bright-colour);
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 0px;
+}
+
+.gridPreviewMenuContainer > h4{
+    padding: none;
+    margin: none;
+}
+
+.gridPreviewMenu{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.previewItem{
+    max-width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2vh;
+
+    padding: 1vh 1vw 2vh 1vw;
+}
+
+.previewItem:hover{
+    cursor: pointer;
+
+    
+    background-color: var(--off-bright-colour);
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 0px;
+    
+}
+
+.previewItem img{
+    width: 130px;
+}

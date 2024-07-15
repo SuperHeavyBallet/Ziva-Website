@@ -4,10 +4,7 @@ TODO:
 
 - Add persistant local storage for shopping cart contents
 - Create Profile Ability
-- Fix CSS for Shopping Cart Items - Maybe name on top, image and info on second row
-- Move Shopping Cart to Right Column
-- Move Other Items in Group to grid below main Item
-- Add Running Shopping List Total
+
 
 # Profile
 - History of Orders
@@ -108,3 +105,7 @@ Catalogue Page sends that Product id to Centre Display
 - //Add HomePage Highlight function > Click item, load Catalogue with that item on display (Probably pass productID)// - Pass Product ID Through Link State + useLocation
 - //Change Quanity - Currently a property of each item, but should be a seperate, non bound variable, may reduce issues//
 - //Default Add Item to 1, Remove ability to add 0//
+- //Fix CSS for Shopping Cart Items - Maybe name on top, image and info on second row//
+- //Move Shopping Cart to Right Column//
+- //Move Other Items in Group to grid below main Item//
+- //Add Running Shopping List Total//

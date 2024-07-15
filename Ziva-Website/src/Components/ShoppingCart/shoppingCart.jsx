@@ -4,8 +4,8 @@ import styles from "./shoppingCart.module.css"
 
 export default function ShoppingCart( {cartContents, onRemoveItem, itemClicked, itemQuantityAdjusted} )
 {
-    
-    console.log("Cart Contents" , cartContents)
+    const [ totalPrice, setTotalPrice ] = useState(0);
+
     function removeItem(item)
     {
         
@@ -19,7 +19,30 @@ export default function ShoppingCart( {cartContents, onRemoveItem, itemClicked, 
     function adjustQuantity(amountToAdjust, itemId)
     {
         itemQuantityAdjusted([itemId, amountToAdjust]);
+        calculateTotalPrice();
     }
+
+    function calculateTotalPrice()
+    {
+        let totalCost = 0; 
+
+        for (let i = 0; i < cartContents.length; i++) {
+            totalCost += cartContents[i].item.price * cartContents[i].quantity;
+        }
+
+        setTotalPrice(parseFloat(totalCost.toFixed(2)));
+       
+    }
+
+    useEffect(() =>
+    {
+        console.log(typeof(totalPrice));
+    }, [totalPrice]);
+
+    useEffect(() =>
+    {
+        calculateTotalPrice();
+    }, [cartContents] );
 
     return(
         <div className={styles.shoppingCartContainer}>
@@ -94,6 +117,10 @@ export default function ShoppingCart( {cartContents, onRemoveItem, itemClicked, 
                     
                 ))
             }
+            </div>
+
+            <div>
+                Total: ${Number(totalPrice)}
             </div>
         </div>
     )

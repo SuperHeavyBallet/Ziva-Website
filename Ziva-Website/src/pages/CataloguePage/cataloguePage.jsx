@@ -3,6 +3,7 @@ import VerticalTextMenu from "../../Components/VerticalTextMenu/verticalTextMenu
 import styles from "./cataloguePage.module.css"
 import products from "../../../public/products.json"
 import VerticalPreviewMenu from "../../Components/VerticalPreviewMenu/verticalPreviewMenu"
+import GridPreviewMenu from "../../Components/GridPreviewMenu/gridPreviewMenu"
 import ItemView from "../../Components/ItemView/itemView"
 import { useState, useEffect } from "react"
 import Footer from "../../Components/Footer/footer"
@@ -64,12 +65,12 @@ export default function CataloguePage( {updateShoppingCartContents, incomingProd
         if (currentCartContents.find((item) => item.name === itemToAdd.name))
         {
             const index = currentCartContents.findIndex(item => item.name === itemToAdd.name);
-            
+
             if (index !== -1) {
                 const updatedItem = {
                     name: itemToAdd.name,
                     item: itemToAdd,
-                    quantity: currentCartContents[index].quantity + itemQuantity
+                    quantity: Number(currentCartContents[index].quantity + itemQuantity)
                 };
 
                 if (updatedItem.quantity > 0)
@@ -169,6 +170,16 @@ export default function CataloguePage( {updateShoppingCartContents, incomingProd
                     selectedItem={itemToDisplay}
                     onClickAddToCart={(itemToAdd, itemQuantity) => updateShoppingCart(itemToAdd, itemQuantity)}
                 />
+                <GridPreviewMenu 
+                    inputItems={products}
+                    clickedItem={(itemID) => handleItemClicked(itemID)}
+                    groupTitle={groupNameToDisplay}
+                    filterGroup={groupToDisplay}
+                />
+            
+            </div>
+            
+            <div className={styles.rightSection}>
 
             <ShoppingCart 
                 cartContents={currentCartContents}
@@ -177,15 +188,7 @@ export default function CataloguePage( {updateShoppingCartContents, incomingProd
                 itemQuantityAdjusted={(adjustQuantity) => handleUpdateQuantity(adjustQuantity)}
                 
             />
-            </div>
-            
-            <div className={styles.rightSection}>
-                <VerticalPreviewMenu 
-                    inputItems={products}
-                    clickedItem={(itemID) => handleItemClicked(itemID)}
-                    groupTitle={groupNameToDisplay}
-                    filterGroup={groupToDisplay}
-                />
+                
             </div>
             </div>
 
