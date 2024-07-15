@@ -16,7 +16,7 @@ export default function CataloguePage( {updateShoppingCartContents, incomingProd
 {
     const location = useLocation();
     const { productID } = location.state || {}; // Access the productID from the state
-    console.log("Product ID: ", productID);
+    
 
     
     useEffect(() => {
@@ -35,6 +35,7 @@ export default function CataloguePage( {updateShoppingCartContents, incomingProd
     const [ groupToDisplay, setGroupToDisplay ] = useState(products[0].group)
     const [ groupNameToDisplay, setGroupNameToDisplay ] = useState(products[0].groupName)
     const [ itemToDisplay, setItemToDisplay ] = useState(products[productID] || products[0]);
+    const [ quantityToAdd, setQuantityToAdd ] = useState(0);
 
 
     function handleItemClicked(itemID)
@@ -55,43 +56,71 @@ export default function CataloguePage( {updateShoppingCartContents, incomingProd
 
     const [ currentCartContents, setCurrentCartContents ] = useState([]);
 
-    function updateShoppingCart(itemToAdd)
+    function updateShoppingCart(itemToAdd, itemQuantity)
     {
-        itemToAdd.quantity = 1;
+        console.log(itemToAdd);
 
+        //Check if item already in cart, if so, update quantity but don't add new item
         if (currentCartContents.find((item) => item.name === itemToAdd.name))
         {
-
             const index = currentCartContents.findIndex(item => item.name === itemToAdd.name);
-            let  updatedCartContents;
-
-            if (index !== -1) {
-                updatedCartContents = [...currentCartContents]; // Shallow copy of the array
-                updatedCartContents[index] = {
-                  ...updatedCartContents[index], // Copy the item to be updated
-                  quantity: updatedCartContents[index].quantity + itemToAdd.quantity // Update the quantity
-                  
-                };
-
-                setCurrentCartContents(updatedCartContents);
-
-               
+         
+            const updatedItem = {
+                name: itemToAdd.name,
+                item: itemToAdd,
+                quantity: currentCartContents[index].quantity + itemQuantity
             }
+
+            if (updatedItem.quantity > 0)
+            {
+                const updatedShoppingCart = currentCartContents.filter(existingItem => existingItem.name !== itemToAdd.name);
+                setCurrentCartContents([updatedItem, ...updatedShoppingCart]);
+            }
+            else
+            {
+
+                handleRemoveItem(itemToAdd);
+            }
+            
+
         }
         else
         {
-            setCurrentCartContents([...currentCartContents, itemToAdd]);
+            setCurrentCartContents([...currentCartContents, { name: itemToAdd.name, item: itemToAdd, quantity: itemQuantity}]);
         }
+
+        
         
 
     }
 
-    function handleRemoveItem(item)
+    function handleUpdateQuantity(updateQuantity)
+    {
+        console.log("Quant: " , updateQuantity[0].name);
+
+        const itemToUpdateName = updateQuantity[0].name;
+        const itemToUpdate = products.find((item) => item.name === itemToUpdateName);
+
+        const amountToAdjustBy = updateQuantity[1];
+
+        updateShoppingCart(itemToUpdate, amountToAdjustBy);
+    }
+
+    useEffect(() =>
     {
        
+    }, [currentCartContents]);
 
-        const updatedShoppingCart = currentCartContents.filter(cartItem => cartItem.name !== item.name);
-        setCurrentCartContents(updatedShoppingCart);
+
+    function handleRemoveItem(item)
+    {
+       if (window.confirm("Remove Item?"))
+       {
+            item.quantity = Number(0);
+            const updatedShoppingCart = currentCartContents.filter(cartItem => cartItem.name !== item.name);
+            setCurrentCartContents(updatedShoppingCart);
+       }
+        
     }
 
     useEffect(() =>
@@ -117,8 +146,9 @@ export default function CataloguePage( {updateShoppingCartContents, incomingProd
             <div className={styles.leftMenu}>
             
             {
-                uniqueGroups.map(group => (
+                uniqueGroups.map((group, index )=> (
                     <VerticalTextMenu 
+                    key={index}
                         inputItems={products}
                         groupTitle={group.groupName}
                         filterGroup={group.group}
@@ -133,13 +163,14 @@ export default function CataloguePage( {updateShoppingCartContents, incomingProd
             <div className={styles.centreSection}>
                 <ItemView 
                     selectedItem={itemToDisplay}
-                    onClickAddToCart={(itemToAdd) => updateShoppingCart(itemToAdd)}
+                    onClickAddToCart={(itemToAdd, itemQuantity) => updateShoppingCart(itemToAdd, itemQuantity)}
                 />
 
             <ShoppingCart 
                 cartContents={currentCartContents}
                 onRemoveItem={(item) => handleRemoveItem(item)}
                 itemClicked={(productID) => handleItemClicked(productID)}
+                itemQuantityAdjusted={(adjustQuantity) => handleUpdateQuantity(adjustQuantity)}
                 
             />
             </div>

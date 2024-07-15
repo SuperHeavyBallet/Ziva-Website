@@ -14,8 +14,10 @@ export default function VerticalPreviewMenu( {inputItems, groupTitle, filterGrou
         <div className={styles.verticalPreviewMenuContainer}>
             <h4>{groupTitle}</h4>
             <div>
-                {filteredItems.map(item => (
-                    <div className={styles.previewItem}
+                {filteredItems.map((item, index) => (
+                    <div 
+                    key={index}
+                    className={styles.previewItem}
                     onClick={() => handleItemClick(item.id)}>
                         <div
                         key={item.id} 
