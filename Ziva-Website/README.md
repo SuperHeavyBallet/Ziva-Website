@@ -2,24 +2,12 @@ TODO:
 
 # Today
 
-
-
-
-
-- //Create shoping cart list//
-- //Add Remove Item from List//
-- //Add Quantity Counter to Item//
-- //Add Price Display x Quantity//
-- Add quantity adjuster
-- //Add Link from shopping cart item to display the same item in main display//
-- //Add HomePage Highlight function > Click item, load Catalogue with that item on display (Probably pass productID)// - Pass Product ID Through Link State + useLocation
 - Add persistant local storage for shopping cart contents
 - Create Profile Ability
-- //Change Quanity - Currently a property of each item, but should be a seperate, non bound variable, may reduce issues//
 - Fix CSS for Shopping Cart Items - Maybe name on top, image and info on second row
-- //Default Add Item to 1, Remove ability to add 0//
 - Move Shopping Cart to Right Column
 - Move Other Items in Group to grid below main Item
+- Add Running Shopping List Total
 
 # Profile
 - History of Orders
@@ -108,3 +96,15 @@ Catalogue Page sends that Product id to Centre Display
 - Work on Top Banner
 --- //Make a module//
 --- //Fix excessive width, overspilling//
+
+# Catalogue Page
+- //Fix Editing list reordering the existing order//
+- //Create shoping cart list//
+- //Add Remove Item from List//
+- //Add Quantity Counter to Item//
+- //Add Price Display x Quantity//
+- //Add quantity adjuster//
+- //Add Link from shopping cart item to display the same item in main display//
+- //Add HomePage Highlight function > Click item, load Catalogue with that item on display (Probably pass productID)// - Pass Product ID Through Link State + useLocation
+- //Change Quanity - Currently a property of each item, but should be a seperate, non bound variable, may reduce issues//
+- //Default Add Item to 1, Remove ability to add 0//

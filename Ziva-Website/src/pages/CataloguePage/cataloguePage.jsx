@@ -64,22 +64,26 @@ export default function CataloguePage( {updateShoppingCartContents, incomingProd
         if (currentCartContents.find((item) => item.name === itemToAdd.name))
         {
             const index = currentCartContents.findIndex(item => item.name === itemToAdd.name);
-         
-            const updatedItem = {
-                name: itemToAdd.name,
-                item: itemToAdd,
-                quantity: currentCartContents[index].quantity + itemQuantity
-            }
+            
+            if (index !== -1) {
+                const updatedItem = {
+                    name: itemToAdd.name,
+                    item: itemToAdd,
+                    quantity: currentCartContents[index].quantity + itemQuantity
+                };
 
-            if (updatedItem.quantity > 0)
-            {
-                const updatedShoppingCart = currentCartContents.filter(existingItem => existingItem.name !== itemToAdd.name);
-                setCurrentCartContents([updatedItem, ...updatedShoppingCart]);
-            }
-            else
-            {
+                if (updatedItem.quantity > 0)
+                {
+                    // Update the item in place to keep the original order
+                const updatedCart = [...currentCartContents];
+                updatedCart[index] = updatedItem;
+                setCurrentCartContents(updatedCart);
+                }
+                else
+                {
 
-                handleRemoveItem(itemToAdd);
+                    handleRemoveItem(itemToAdd);
+                }
             }
             
 
