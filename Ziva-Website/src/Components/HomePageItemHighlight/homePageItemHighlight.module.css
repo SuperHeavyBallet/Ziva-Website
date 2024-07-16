@@ -28,6 +28,22 @@
 .homePageItemReel{
     display: flex;
     flex-direction: row;
+    place-content: center;
+}
+
+.homePageItemReel button{
+    background-color: transparent;
+    max-width: 50px;
+    max-height: 50px;
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+
+}
+
+.homePageItemReel button svg{
+    max-width: 50px;
+    max-height: 30px;
 }
 
 .homePageHighlightItem{

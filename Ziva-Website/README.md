@@ -1,7 +1,8 @@
 TODO:
 
 # Today
-
+- Add Arrows to homepage highlight reel to scroll through displayed items manually
+- //Loading Catalogue via front page doesn't load related items in other items//
 - Add persistant local storage for shopping cart contents
 - Create Profile Ability
 

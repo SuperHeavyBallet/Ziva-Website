@@ -33,7 +33,7 @@ export default function CataloguePage( {updateShoppingCartContents, incomingProd
    
 
     
-    const [ groupToDisplay, setGroupToDisplay ] = useState(products[0].group)
+    const [ groupToDisplay, setGroupToDisplay ] = useState( products[productID].group|| products[0].group)
     const [ groupNameToDisplay, setGroupNameToDisplay ] = useState(products[0].groupName)
     const [ itemToDisplay, setItemToDisplay ] = useState(products[productID] || products[0]);
     const [ quantityToAdd, setQuantityToAdd ] = useState(0);
