@@ -2,7 +2,7 @@ TODO:
 
 # Today
 
-- Add persistant local storage for shopping cart contents
+
 - Create Profile Ability
 
 
@@ -113,3 +113,4 @@ Catalogue Page sends that Product id to Centre Display
 - //Move Shopping Cart to Right Column//
 - //Move Other Items in Group to grid below main Item//
 - //Add Running Shopping List Total//
+- //Add persistant local storage for shopping cart contents//

@@ -37,7 +37,7 @@ export default function CataloguePage( {updateShoppingCartContents, incomingProd
         const product = products[productID];
         return product && product.group ? product.group : products[0].group;
       });
-      
+
     const [ groupNameToDisplay, setGroupNameToDisplay ] = useState(products[0].groupName)
     const [ itemToDisplay, setItemToDisplay ] = useState(products[productID] || products[0]);
     const [ quantityToAdd, setQuantityToAdd ] = useState(0);
@@ -58,8 +58,14 @@ export default function CataloguePage( {updateShoppingCartContents, incomingProd
         setGroupNameToDisplay(chosenItems[0].groupName);
         window.scrollTo(0, 0);
     }
+    
 
-    const [ currentCartContents, setCurrentCartContents ] = useState([]);
+    const [ currentCartContents, setCurrentCartContents ] = useState( () =>
+    {
+        const savedCart =  localStorage.getItem("currentCartContents");
+        const initialCartValue = JSON.parse(savedCart);
+        return initialCartValue || [];
+    });
 
     function updateShoppingCart(itemToAdd, itemQuantity)
     {
@@ -117,7 +123,7 @@ export default function CataloguePage( {updateShoppingCartContents, incomingProd
 
     useEffect(() =>
     {
-       
+       localStorage.setItem("currentCartContents" , JSON.stringify(currentCartContents));
     }, [currentCartContents]);
 
 
