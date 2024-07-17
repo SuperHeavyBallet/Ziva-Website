@@ -42,6 +42,7 @@ export default function ShoppingCart( {cartContents, onRemoveItem, itemClicked, 
     useEffect(() =>
     {
         calculateTotalPrice();
+        
     }, [cartContents] );
 
     return(
