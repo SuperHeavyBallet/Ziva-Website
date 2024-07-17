@@ -1,8 +1,7 @@
 TODO:
 
 # Today
-- Add Arrows to homepage highlight reel to scroll through displayed items manually
-- //Loading Catalogue via front page doesn't load related items in other items//
+
 - Add persistant local storage for shopping cart contents
 - Create Profile Ability
 
@@ -94,6 +93,10 @@ Catalogue Page sends that Product id to Centre Display
 - Work on Top Banner
 --- //Make a module//
 --- //Fix excessive width, overspilling//
+
+# Home Page
+-// Add Arrows to homepage highlight reel to scroll through displayed items manually//
+- //Loading Catalogue via front page doesn't load related items in other items//
 
 # Catalogue Page
 - //Fix Editing list reordering the existing order//
