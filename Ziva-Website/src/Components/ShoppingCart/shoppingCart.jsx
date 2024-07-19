@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
 import styles from "./shoppingCart.module.css"
+import { Link } from "react-router-dom";
 
 
-export default function ShoppingCart( {cartContents, onRemoveItem, itemClicked, itemQuantityAdjusted} )
+export default function ShoppingCart( {cartContents, onRemoveItem, itemClicked, itemQuantityAdjusted, isOrderPage} )
 {
     const [ totalPrice, setTotalPrice ] = useState(0);
+    const [ hasOrder, setHasOrder ] = useState(false);
 
     function removeItem(item)
     {
@@ -34,6 +36,18 @@ export default function ShoppingCart( {cartContents, onRemoveItem, itemClicked, 
        
     }
 
+    function setOrderReady()
+    {
+        if (cartContents.length > 0)
+        {
+            setHasOrder(true);
+        }
+        else
+        {
+            setHasOrder(false);
+        }
+    }
+
     useEffect(() =>
     {
         console.log(typeof(totalPrice));
@@ -42,8 +56,28 @@ export default function ShoppingCart( {cartContents, onRemoveItem, itemClicked, 
     useEffect(() =>
     {
         calculateTotalPrice();
+        setOrderReady();
+        
         
     }, [cartContents] );
+
+    function SendOrderButton()
+    {
+        if (!isOrderPage)
+        {
+            return(
+                <Link to={"/orders"}>
+                <button className={`${styles.shoppingCartSendOrder} ${hasOrder ? styles.visible : styles.hidden}`}>
+                    Send Order</button>
+                    </Link>
+            )
+        }
+        else
+        {
+            return null;
+        }
+    }
+
 
     return(
         <div className={styles.shoppingCartContainer}>
@@ -123,6 +157,11 @@ export default function ShoppingCart( {cartContents, onRemoveItem, itemClicked, 
             <div>
                 Total: ${Number(totalPrice)}
             </div>
+
+            <SendOrderButton />
+            
+            
+            
         </div>
     )
 }

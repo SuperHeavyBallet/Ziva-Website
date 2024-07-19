@@ -2,8 +2,16 @@ TODO:
 
 # Today
 
+- //Hook Order Page Shopping Cart Functions into higher state update//
+- Order Page Shopping Cart, click image > go to catalogue > Load clicked item + group
+- //Order Page Shopping Cart, create unique Send Order function (Probably based on prop 'isOrderPage')//
+- Add rough order form populated with input fields and send button
+- Make send button collect order info + input info as object and log to console
 
 - Create Profile Ability
+- //Create Profile Navbar Icon//
+
+- Add Send Order Button (Collect order as object, transfer to send email section with input fields, user email, name, phone number)
 
 
 # Profile

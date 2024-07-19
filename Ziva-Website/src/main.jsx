@@ -8,6 +8,8 @@ import AboutUsPage from './pages/AboutUsPage/aboutUsPage'
 
 import './index.css'
 import ShoppingCart from './Components/ShoppingCart/shoppingCart'
+import UserPage from './pages/UserPage/userPage'
+import OrdersPage from './pages/OrdersPage/ordersPage'
 
 
 
@@ -22,8 +24,16 @@ const router = createBrowserRouter([
     element: <CataloguePage />
   },
   {
+    path: "orders",
+    element: <OrdersPage />
+  },
+  {
     path: "about",
     element: <AboutUsPage />
+  },
+  {
+    path: "user",
+    element: <UserPage />
   },
 ]);
 

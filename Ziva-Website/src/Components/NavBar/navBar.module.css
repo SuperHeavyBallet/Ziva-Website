@@ -9,7 +9,7 @@
     margin: 0; 
     padding: 0;
     
-    position: fixed; /* or absolute */
+    position: fixed;
     top: 0;
     left: 0;
     z-index: 1000;
@@ -61,6 +61,45 @@
 .navBarLink:hover{
     background-color: var(--mid-colour);
    
+}
+
+
+
+.navBarProfileMenu{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    top: 80px;
+    right: 3vw;
+    z-index: 1000;
+    background-color: var(--bright-colour);
+    box-shadow: rgba(0, 0, 0, 0.15) 2px 2px 2px;
+    overflow: hidden;
+
+    transition: opacity 0.25s ease;
+    opacity: 0;
+    padding: 1vh 1vw;
+}
+
+.hidden{
+
+    opacity: 0;
+
+}
+
+.visible{
+
+    opacity: 1;
+}
+
+.navBarProfileMenu ul{
+    padding: 0;
+    margin: 0;
+}
+.navBarProfileMenu ul li{
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 

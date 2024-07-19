@@ -138,10 +138,6 @@ export default function CataloguePage( {updateShoppingCartContents, incomingProd
         
     }
 
-    useEffect(() =>
-    {
-        //updateShoppingCartContents(currentCartContents);
-    }, [currentCartContents]);
 
 
     return(
@@ -196,6 +192,7 @@ export default function CataloguePage( {updateShoppingCartContents, incomingProd
                 onRemoveItem={(item) => handleRemoveItem(item)}
                 itemClicked={(productID) => handleItemClicked(productID)}
                 itemQuantityAdjusted={(adjustQuantity) => handleUpdateQuantity(adjustQuantity)}
+                isOrderPage={false}
                 
             />
                 
