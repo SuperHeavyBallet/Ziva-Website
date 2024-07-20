@@ -1,5 +1,5 @@
 import styles from "./orderForm.module.css"
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function OrderForm()
 {
@@ -10,22 +10,58 @@ export default function OrderForm()
         return initialCartValue || [];
     });
 
+    const [ name, setName ] = useState("");
+    const [ email, setEmail ] = useState("");
+    const [ phoneNumber, setPhoneNumber ] = useState(0);
+
+    const [ orderContent, setOrderContent ] = useState({ name : "", email : "", phoneNumber : 0, orderItems : {}});
+         
+
+
+    function updateName(event)
+    {
+        setName(event.target.value);
+    }
+    function updateEmail(event)
+    {
+        setEmail(event.target.value);
+    }
+    function updatePhoneNumber(event)
+    {
+        setPhoneNumber(event.target.value)
+    }
+
     function handleSubmitOrder(e)
     {
         e.preventDefault();
 
-        window.alert(currentCartContents);
+
+        setOrderContent( { name : name, email: email, phoneNumber: phoneNumber, orderItems: currentCartContents});
+
+        
     }
 
+    useEffect(() =>
+    {
+        console.log(orderContent);
+    }, [orderContent])
     return(
         <div>
             Order Form
-            <form>
-                <label for="orderNameField">Your Name:</label>
-                <input id="orderNameField" name="orderNameField" placeholder="Your Name"></input>
+            
+                <label htmlFor="orderNameField">Your Name:</label>
+                <input id="orderNameField" name="orderNameField" placeholder="Your Name"  onChange={(event) => updateName(event)}></input>
 
-                <button onSubmit={() => handleSubmitOrder(e)}>Send Order</button>
-            </form>
+                <label htmlFor="orderEmailField">Your Email:</label>
+                <input id="orderEmailField" name="orderEmailField" placeholder="email@address.com"  onChange={(event) => updateEmail(event)}></input>
+
+                <label htmlFor="orderPhoneField">Your Phone Number:</label>
+                <input id="orderPhoneField" name="orderPhoneField" onChange={(event) => updatePhoneNumber(event)}></input>
+
+                <button onClick={(e) => handleSubmitOrder(e)}>Send Order</button>
+
+         
+            
         </div>
     )
 }

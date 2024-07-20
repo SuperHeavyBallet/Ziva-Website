@@ -15,7 +15,31 @@ export default function ShoppingCart( {cartContents, onRemoveItem, itemClicked, 
     }
     function handleItemClicked(itemId)
     {
-        itemClicked(itemId);
+
+            itemClicked(itemId);
+
+        
+    }
+
+    function ClickableImage( { clickedProduct })
+    {
+        if (!isOrderPage)
+        {
+            return(
+                <img className={styles.shoppingCartImage}
+                                onClick={() => handleItemClicked(clickedProduct.item.id)}
+                                src={clickedProduct.item.image}></img>
+            );
+        }
+        else if (isOrderPage)
+        {
+            return(
+                <Link to="/products" state={{ productID: clickedProduct.item.id }}>
+                <img className={styles.shoppingCartImage}
+                                src={clickedProduct.item.image}></img>
+                                </Link>
+            )
+        }
     }
 
     function adjustQuantity(amountToAdjust, itemId)
@@ -92,9 +116,9 @@ export default function ShoppingCart( {cartContents, onRemoveItem, itemClicked, 
                     
                     >
                         <div className={styles.shoppingCartFirstBox}>
-                            <img className={styles.shoppingCartImage}
-                                onClick={() => handleItemClicked(product.item.id)}
-                                src={product.item.image}></img>
+                            <ClickableImage 
+                            clickedProduct={product}
+                            />
                         </div>
 
                         <div className={styles.shoppingCartSecondBox}>

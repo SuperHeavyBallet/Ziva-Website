@@ -3,10 +3,11 @@ TODO:
 # Today
 
 - //Hook Order Page Shopping Cart Functions into higher state update//
-- Order Page Shopping Cart, click image > go to catalogue > Load clicked item + group
+- //Order Page Shopping Cart, click image > go to catalogue > Load clicked item + group//
 - //Order Page Shopping Cart, create unique Send Order function (Probably based on prop 'isOrderPage')//
-- Add rough order form populated with input fields and send button
-- Make send button collect order info + input info as object and log to console
+- //Add rough order form populated with input fields and send button//
+- //Make send button collect order info + input info as object and log to console//
+- Add Total Price to finalOrder object
 
 - Create Profile Ability
 - //Create Profile Navbar Icon//
