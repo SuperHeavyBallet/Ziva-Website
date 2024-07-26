@@ -80,6 +80,8 @@ export default function OrdersPage( {shoppingCartContents, onRemoveItem, itemCli
         }
     }
 
+  
+
     useEffect(() =>
     {
        localStorage.setItem("currentCartContents" , JSON.stringify(currentCartContents));
@@ -89,7 +91,6 @@ export default function OrdersPage( {shoppingCartContents, onRemoveItem, itemCli
         <div>
 
             <NavBar />
-
             <div>
                 <ShoppingCart cartContents={currentCartContents} 
                 onRemoveItem={(item) => handleRemoveItem(item)}
@@ -100,8 +101,12 @@ export default function OrdersPage( {shoppingCartContents, onRemoveItem, itemCli
                 
 
             </div>
+            
             <div>
-                <OrderForm />
+                <OrderForm 
+              
+                
+                />
             </div>
         </div>
     )

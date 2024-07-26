@@ -1,7 +1,8 @@
+import Receipt from "../Receipt/receipt";
 import styles from "./orderForm.module.css"
 import { useEffect, useState } from "react";
 
-export default function OrderForm()
+export default function OrderForm(  )
 {
     const [ currentCartContents, setCurrentCartContents ] = useState( () =>
     {
@@ -41,13 +42,17 @@ export default function OrderForm()
         
     }
 
+
+
     useEffect(() =>
     {
         console.log(orderContent);
     }, [orderContent])
     return(
-        <div>
+        <div className={styles.orderForm}>
             Order Form
+
+                
             
                 <label htmlFor="orderNameField">Your Name:</label>
                 <input id="orderNameField" name="orderNameField" placeholder="Your Name"  onChange={(event) => updateName(event)}></input>
@@ -60,7 +65,13 @@ export default function OrderForm()
 
                 <button onClick={(e) => handleSubmitOrder(e)}>Send Order</button>
 
-         
+                <Receipt 
+                    customerName={orderContent.name}
+                    customerEmail={orderContent.email}
+                    customerPhone={orderContent.phoneNumber}
+                    customerOrder={orderContent.orderItems}
+                    customerTotalPrice={"9.99"}
+                />
             
         </div>
     )

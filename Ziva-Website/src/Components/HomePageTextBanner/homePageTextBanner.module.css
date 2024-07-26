@@ -1,0 +1,21 @@
+.homepageTextBannerContainer{
+    
+    background-color: var(--bright-colour);
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 0px;
+
+    background-size: cover;
+    background-position: center;
+    
+    margin: 1vh 2vw;
+    padding: 1vh 2vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+
+    height: 30vh;
+    width: 70vw;
+
+    position: relative;
+    
+}

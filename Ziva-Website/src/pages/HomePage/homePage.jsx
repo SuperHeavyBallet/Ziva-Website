@@ -10,6 +10,7 @@ import { useEffect, useState } from "react";
 import ShoppingCart from "../../Components/ShoppingCart/shoppingCart"
 import Button from "../../Components/Button/button"
 import TopBanner from "../../Components/TopBanner/topBanner"
+import HomePageTextBanner from "../../Components/HomePageTextBanner/homePageTextBanner"
 
 
 
@@ -50,11 +51,12 @@ export default function HomePage(){
             <HomePageItemHighlight 
                 highlightItems={products}
             />
+
+            <HomePageTextBanner />
+
             <HomePageContactSection />
 
-            <ShoppingCart 
-                cartContents={currentCartContents}
-            />
+           
 
             </div>
             
