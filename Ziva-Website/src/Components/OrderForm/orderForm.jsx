@@ -2,13 +2,13 @@ import Receipt from "../Receipt/receipt";
 import styles from "./orderForm.module.css"
 import { useEffect, useState } from "react";
 
-export default function OrderForm(  )
+export default function OrderForm( { cartContents } )
 {
     const [ currentCartContents, setCurrentCartContents ] = useState( () =>
     {
         const savedCart =  localStorage.getItem("currentCartContents");
         const initialCartValue = JSON.parse(savedCart);
-        return initialCartValue || [];
+        return initialCartValue || cartContents || [] ;
     });
 
     const [ name, setName ] = useState("");
@@ -16,6 +16,7 @@ export default function OrderForm(  )
     const [ phoneNumber, setPhoneNumber ] = useState(0);
 
     const [ orderContent, setOrderContent ] = useState({ name : "", email : "", phoneNumber : 0, orderItems : {}});
+    const [ totalPrice, setTotalPrice ] = useState(0);
          
 
 
@@ -32,12 +33,36 @@ export default function OrderForm(  )
         setPhoneNumber(event.target.value)
     }
 
+    function calculateTotalPrice()
+    {
+            
+        let runningTotal = 0;
+        console.log("Runing Total Pre: " , runningTotal);
+
+            for (let i = 0; i < orderContent.orderItems.length; i++)
+            {
+                let itemQuantity = Number(orderContent.orderItems[i].quantity);
+                let itemPrice = Number(orderContent.orderItems[i].item.price);
+                let itemTotalPrice = itemQuantity * itemPrice;
+                runningTotal += itemTotalPrice;
+            }
+
+            console.log("Runing Total Post: " , runningTotal);
+
+            setTotalPrice(parseFloat(runningTotal).toFixed(2));
+        
+    }
+
     function handleSubmitOrder(e)
     {
         e.preventDefault();
 
-
+        
         setOrderContent( { name : name, email: email, phoneNumber: phoneNumber, orderItems: currentCartContents});
+        calculateTotalPrice();
+
+        window.alert("Your Order has been sent, you will receive a reply within 1-2 working days. Thank you!")
+        
 
         
     }
@@ -47,8 +72,15 @@ export default function OrderForm(  )
     useEffect(() =>
     {
         console.log(orderContent);
+        calculateTotalPrice();
     }, [orderContent])
+
+    useEffect(() =>
+    {
+        setCurrentCartContents(cartContents);
+    }, [cartContents]);
     return(
+        <div>
         <div className={styles.orderForm}>
             Order Form
 
@@ -64,15 +96,17 @@ export default function OrderForm(  )
                 <input id="orderPhoneField" name="orderPhoneField" onChange={(event) => updatePhoneNumber(event)}></input>
 
                 <button onClick={(e) => handleSubmitOrder(e)}>Send Order</button>
-
-                <Receipt 
+                </div>
+            <div>               
+                 <Receipt 
                     customerName={orderContent.name}
                     customerEmail={orderContent.email}
                     customerPhone={orderContent.phoneNumber}
                     customerOrder={orderContent.orderItems}
-                    customerTotalPrice={"9.99"}
+                    customerTotalPrice={`Total Price: ${totalPrice}`}
                 />
-            
+            </div>
+
         </div>
     )
 }

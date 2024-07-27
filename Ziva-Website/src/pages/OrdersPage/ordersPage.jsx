@@ -104,7 +104,7 @@ export default function OrdersPage( {shoppingCartContents, onRemoveItem, itemCli
             
             <div>
                 <OrderForm 
-              
+                    cartContents={currentCartContents}
                 
                 />
             </div>

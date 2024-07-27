@@ -7,12 +7,12 @@ TODO:
 - //Order Page Shopping Cart, create unique Send Order function (Probably based on prop 'isOrderPage')//
 - //Add rough order form populated with input fields and send button//
 - //Make send button collect order info + input info as object and log to console//
-- Add Total Price to finalOrder object
+- //Add Total Price to finalOrder object//
 
 - Create Profile Ability
 - //Create Profile Navbar Icon//
 
-- Add Send Order Button (Collect order as object, transfer to send email section with input fields, user email, name, phone number)
+- /Add Send Order Button (Collect order as object, transfer to send email section with input fields, user email, name, phone number)
 
 
 # Profile
