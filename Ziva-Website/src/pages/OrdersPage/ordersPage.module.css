@@ -1,0 +1,24 @@
+.pageContainer{
+    background-color: var(--off-bright-colour);
+    width: 100vw;
+    max-width:100%;  /* added */
+    height: 100%;
+    padding-top: 8vh;
+
+    display: flex;
+    flex-direction: row;
+
+    align-items: start;
+    justify-content: start;
+}
+
+.orderPageShoppingCart{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.orderSection{
+    display: flex;
+    flex-direction: column;
+}

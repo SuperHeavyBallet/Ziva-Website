@@ -10,6 +10,7 @@ TODO:
 - //Add Total Price to finalOrder object//
 
 - Create Profile Ability
+- Add Order Form Verification
 - //Create Profile Navbar Icon//
 
 - /Add Send Order Button (Collect order as object, transfer to send email section with input fields, user email, name, phone number)

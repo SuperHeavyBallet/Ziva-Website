@@ -91,7 +91,8 @@ export default function OrdersPage( {shoppingCartContents, onRemoveItem, itemCli
         <div>
 
             <NavBar />
-            <div>
+            <div className={styles.pageContainer}>
+            <div className={styles.orderPageShoppingCart}>
                 <ShoppingCart cartContents={currentCartContents} 
                 onRemoveItem={(item) => handleRemoveItem(item)}
                 itemClicked={(productID) => handleItemClicked(productID)}
@@ -102,11 +103,12 @@ export default function OrdersPage( {shoppingCartContents, onRemoveItem, itemCli
 
             </div>
             
-            <div>
+            <div className={styles.orderSection}>
                 <OrderForm 
                     cartContents={currentCartContents}
                 
                 />
+            </div>
             </div>
         </div>
     )
