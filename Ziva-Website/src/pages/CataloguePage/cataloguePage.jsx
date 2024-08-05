@@ -11,6 +11,7 @@ import ShoppingCart from "../../Components/ShoppingCart/shoppingCart"
 import Button from "../../Components/Button/button"
 import TopBanner from "../../Components/TopBanner/topBanner"
 import { useLocation } from "react-router-dom"
+import HorizontalProductMenu from "../../Components/HorizontalProductsMenu/horizontalProductsMenu"
 
 
 export default function CataloguePage( {updateShoppingCartContents, incomingProductID})
@@ -152,8 +153,7 @@ export default function CataloguePage( {updateShoppingCartContents, incomingProd
             
         <div className={styles.cataloguePageContent}>
 
-            
-            
+       
             <div className={styles.leftMenu}>
             
             {

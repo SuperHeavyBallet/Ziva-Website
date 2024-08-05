@@ -45,7 +45,7 @@ export default function NavBar()
             <div className={styles.navBarLink}>Orders</div>
             </Link>
            
-                <SearchBar />
+               
            
 
             <Link to={"/about"}>

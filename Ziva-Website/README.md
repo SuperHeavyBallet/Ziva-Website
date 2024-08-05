@@ -2,16 +2,12 @@ TODO:
 
 # Today
 
-- //Hook Order Page Shopping Cart Functions into higher state update//
-- //Order Page Shopping Cart, click image > go to catalogue > Load clicked item + group//
-- //Order Page Shopping Cart, create unique Send Order function (Probably based on prop 'isOrderPage')//
-- //Add rough order form populated with input fields and send button//
-- //Make send button collect order info + input info as object and log to console//
-- //Add Total Price to finalOrder object//
+- //Add Order Form Verification//
 
-- Create Profile Ability
-- Add Order Form Verification
-- //Create Profile Navbar Icon//
+- Decide on overall CSS theme
+- Create Database for products
+- Create Order send to Email 
+- Create Backend Server (NodeJS)
 
 - /Add Send Order Button (Collect order as object, transfer to send email section with input fields, user email, name, phone number)
 
@@ -124,3 +120,11 @@ Catalogue Page sends that Product id to Centre Display
 - //Move Other Items in Group to grid below main Item//
 - //Add Running Shopping List Total//
 - //Add persistant local storage for shopping cart contents//
+
+
+- //Hook Order Page Shopping Cart Functions into higher state update//
+- //Order Page Shopping Cart, click image > go to catalogue > Load clicked item + group//
+- //Order Page Shopping Cart, create unique Send Order function (Probably based on prop 'isOrderPage')//
+- //Add rough order form populated with input fields and send button//
+- //Make send button collect order info + input info as object and log to console//
+- //Add Total Price to finalOrder object//

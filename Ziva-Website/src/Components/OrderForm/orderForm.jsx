@@ -57,13 +57,34 @@ export default function OrderForm( { cartContents } )
     {
         e.preventDefault();
 
-        
-        setOrderContent( { name : name, email: email, phoneNumber: phoneNumber, orderItems: currentCartContents});
-        calculateTotalPrice();
+        //const namePattern = /^[a-zA-Z\s]+$/;
+        const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        const phoneNumberPattern = /^[0-9]{10,15}$/; // Adjust the range as needed
 
-        window.alert("Your Order has been sent, you will receive a reply within 1-2 working days. Thank you!")
+        if (name != "" && email != "" && phoneNumber != "")
+        {
+
+            if (!emailPattern.test(email)) {
+                window.alert("Please enter a valid email address.");
+                return;
+            }
+    
+            if (!phoneNumberPattern.test(phoneNumber)) {
+                window.alert("Please enter a valid phone number (10-15 digits).");
+                return;
+            }
+
+            setOrderContent( { name : name, email: email, phoneNumber: phoneNumber, orderItems: currentCartContents});
+            calculateTotalPrice();
+
+            window.alert("Your Order has been sent, you will receive a reply within 1-2 working days. Thank you!")
         
 
+        }
+        else
+        {
+            window.alert("Please complete the form!");
+        }
         
     }
 
