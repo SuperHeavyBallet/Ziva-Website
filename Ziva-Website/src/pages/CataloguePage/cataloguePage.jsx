@@ -146,8 +146,7 @@ export default function CataloguePage( {updateShoppingCartContents, incomingProd
             <NavBar />
 
             <TopBanner 
-            className={styles.topBanner}
-            bannerText="Add Items To Your Shopping List and Send an Email Enquiry!"
+                bannerText="Add Items To Your Shopping List and Send an Email Enquiry!"
             />
 
             

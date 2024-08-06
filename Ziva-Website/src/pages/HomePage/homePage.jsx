@@ -7,7 +7,6 @@ import HomePageContactSection from "../../Components/HomePageContactSection/home
 import products from "../../../public/products.json"
 import Footer from "../../Components/Footer/footer"
 import { useEffect, useState } from "react";
-import ShoppingCart from "../../Components/ShoppingCart/shoppingCart"
 import Button from "../../Components/Button/button"
 import TopBanner from "../../Components/TopBanner/topBanner"
 import HomePageTextBanner from "../../Components/HomePageTextBanner/homePageTextBanner"
@@ -16,12 +15,6 @@ import HomePageTextBanner from "../../Components/HomePageTextBanner/homePageText
 
 export default function HomePage(){
 
-    const [ currentCartContents, setCurrentCartContents ] = useState([]);
-
-    function updateShoppingCart(itemToAdd)
-    {
-        setCurrentCartContents(...currentCartContents, itemToAdd);
-    }
 
     useEffect(() => {
         backToTop();
@@ -43,18 +36,28 @@ export default function HomePage(){
 
             
             <div className={styles.centreSection}>
-            <HeroBanner
-                bannerTitle="ZIVA KOMERC"
-                bannerImageSrc={bannerImage}
-                bannerText="Veros odus quintum fax niel et hadif qul far epo"
-            />
-            <HomePageItemHighlight 
-                highlightItems={products}
-            />
 
-            <HomePageTextBanner />
+                <div className={styles.partialPageStrip}>
+                    <HeroBanner
+                        bannerTitle="ZIVA KOMERC"
+                        bannerImageSrc={bannerImage}
+                        bannerText="Veros odus quintum fax niel et hadif."
+                    />
+                </div>
 
-            <HomePageContactSection />
+                <div className={styles.fullPageStrip}>
+                    <HomePageItemHighlight 
+                        highlightItems={products}
+                    />
+                </div>
+
+                <div className={styles.partialPageStrip}>
+                <HomePageTextBanner />
+                </div>
+
+                <div className={styles.partialPageStrip}>
+                    <HomePageContactSection />
+                </div>
 
            
 

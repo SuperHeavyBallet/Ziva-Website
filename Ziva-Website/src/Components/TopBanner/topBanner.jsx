@@ -5,7 +5,7 @@ export default function TopBanner( {bannerText})
     return(
         
             <div className={styles.topBanner}>
-                {bannerText}
+                <h4>{bannerText}</h4>
 
             </div>
         

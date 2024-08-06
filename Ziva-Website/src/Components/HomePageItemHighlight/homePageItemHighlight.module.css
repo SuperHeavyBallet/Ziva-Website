@@ -1,11 +1,9 @@
 
 
 .homePageItemHighlightContainer{
-    background-color: var(--bright-colour);
-    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 0px;
-    
+
     margin: 1vh 2vw;
-    padding: 2vh 2vw;
+    padding: 1vh 2vw 2vh 2vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -23,27 +21,39 @@
     margin: 0 0 2vh 0;
     padding: 0;
     text-align: start;
+    font-weight: 600;
 }
 
 .homePageItemReel{
     display: flex;
     flex-direction: row;
     place-content: center;
+    place-items: center;
 }
 
 .homePageItemReel button{
-    background-color: transparent;
-    max-width: 50px;
-    max-height: 50px;
+    background-color: black;
+    max-width: 30px;
+    height: 80px;
     display: flex;
     flex-direction: column;
-    place-content: center;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    transition: transform 0.1s ease-out;
 
+
+}
+
+.homePageItemReel button:hover{
+
+    transform: scale(105%);
 }
 
 .homePageItemReel button svg{
     max-width: 50px;
     max-height: 30px;
+    color: var(--bright-colour);
 }
 
 .homePageHighlightItem{
@@ -56,14 +66,29 @@
     align-items: center;
     justify-content: center;
 
-    width: 150px;
-    height: 130px;
+    width: 140px;
+    height: 140px;
     text-align: center;
     transition: transform 0.2s ease-out;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+    overflow: hidden;
+}
+
+.homePageHighlightItem::after{
+    box-shadow: 0 5px 2px rgba(0,0,0,0.15);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+
+}
+
+.homePageHighlightItem:hover::after{
+    opacity: 1;
 }
 
 .homePageHighlightItem:hover{
     transform: scale(105%);
+    
+    
 }
 
 

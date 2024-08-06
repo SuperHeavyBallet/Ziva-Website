@@ -1,105 +1,118 @@
-
-
 .navBar{
-    width: 100vw;
-    
+    max-width: calc(100vw - 17px);
     background-color: var(--bright-colour);
     box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 0px;
     box-sizing: border-box; 
+
     margin: 0; 
     padding: 0;
     
     position: fixed;
     top: 0;
     left: 0;
+    right: 0;
     z-index: 1000;
-    
-   
 }
 
-.navBarFirstRow{
-    background-color: blue;
+@media (min-width: 100vw) {
+
+    .navBar{
+        width: calc(100vw - 17px);
+    }
+}
+
+/* Top Contact Phone Number Row */
+.navBarContactRow{
+    background-color: #003eff;
     color: white;
-    height: 3vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     font-weight: bold;
-    
 }
 
-.navBarFirstRow svg{
+.navBarContactRow svg{
     color: white;
-    height: 25px;
+    height: 20px;
     width: auto;
-    margin: 0.5vw;
+    margin: 0.3vw;
 }
 
+.navBarContactRow h3{
+    padding: 0;
+    margin: 0;
+}
+
+/* Main Content Row */
 .navBarSecondRow{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    height: 5vh;
+    margin: 0;
     padding: 0;
 }
 
-.navBarSecondRow h3{
-    margin: 0;
+.navBarSide{
+    flex: 1;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+.navBarSide svg{
+
+        fill-rule: evenodd;
+        max-height: 25px;
+        max-width: 30px;
+        padding: 0;
+        margin: 0;
+
+}
+
+.navBarSide h3{
+    font-weight: 800;
     padding: 0;
+    margin: 1.5vh;
+    
+}
+
+.navBarCentre{
+    flex: 3;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
 }
 
 .navBarLink{
     color: var(--dark-colour);
-    padding: 1vh 1vw;
-    height: 100%;
+    border-left: 1px solid var(--mid-colour) ;
     
-   
+}
+
+.navBarLink h3{
+    font-weight: 500;
+    padding: 0;
+    margin: 1.5vh;
+}
+
+.navBarLink:first-of-type{
+    border-left: 1px solid var(--dark-colour) ;
+}
+.navBarLink:last-of-type{
+    border-right: 1px solid var(--dark-colour) ;
 }
 
 .navBarLink:hover{
     background-color: var(--mid-colour);
-   
+    color: var(--dark-colour);
 }
-
-
-
-.navBarProfileMenu{
-    position: fixed;
-    display: flex;
-    flex-direction: column;
-    top: 80px;
-    right: 3vw;
-    z-index: 1000;
-    background-color: var(--bright-colour);
-    box-shadow: rgba(0, 0, 0, 0.15) 2px 2px 2px;
-    overflow: hidden;
-
-    transition: opacity 0.25s ease;
-    opacity: 0;
-    padding: 1vh 1vw;
-}
-
-.hidden{
-
-    opacity: 0;
-
-}
-
-.visible{
-
-    opacity: 1;
-}
-
-.navBarProfileMenu ul{
-    padding: 0;
-    margin: 0;
-}
-.navBarProfileMenu ul li{
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
+  
 
 
