@@ -1,0 +1,15 @@
+.largeImageRow{
+    display: flex;
+    flex-direction: row;
+    max-width: 60vw;
+    justify-content: space-between;
+    margin: 3vh 0 2vh 0;
+    padding: 0 1vw;
+
+
+}
+
+.largeImage img{
+    max-width: 300px;
+   
+}

@@ -1,16 +1,25 @@
 
 
 .homePageContactSectionContainer{
-    background-color: var(--bright-colour);
-    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 0px;
     margin: 1vh 2vw;
     padding: 1vh 2vw;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    
 }
 
+.homePageContactSectionContainer h3{
+    font-weight: 600;
+}
+
+.homePageContactSectionSquares
+{
+    display: flex;
+    flex-direction: row;
+}
 .homePageContactSectionTextArea{
     width: 300px;
     height: 300px;
@@ -18,10 +27,24 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 1px dashed var(--dark-colour);
+   background-color: var(--mid-colour);
+
     margin: 1vh 1vw;
     
+    
 }
+.homePageContactSectionTextArea h3{
+    padding: 0;
+    margin: 0.8vh;
+    font-weight: 800;
+    font-family: 'Open Sans';
+    
+}
+
+.homePageContactSectionTextArea p{
+    font-family: 'Open Sans';
+}
+
 
 .homePageContactSectionTextArea p{
     padding: 0;
@@ -31,7 +54,7 @@
 .homePageContactSectionMapArea{
     width: 300px;
     height: 300px;
-    border: 1px dashed var(--dark-colour);
+    
     margin: 1vh 1vw;
     overflow: hidden;
    

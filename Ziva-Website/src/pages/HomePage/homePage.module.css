@@ -1,6 +1,6 @@
 
 .pageContainer{
-    background-color:var(--mid-colour);
+    background-color: white;
     padding-top: 8vh;
 
     display: flex;
@@ -15,7 +15,7 @@
     width: calc(100vw - 17px);
     padding: 1vh 0 ;
     margin: 0;
-    background-color: #bbdefb;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -24,6 +24,11 @@
 
 .partialPageStrip{
     padding: 2vh 20vw;
+}
+
+.backToTopButton{
+    background-color: black;
+    border: 1px solid black;
 }
 
 

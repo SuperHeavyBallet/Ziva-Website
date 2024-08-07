@@ -11,14 +11,14 @@ export default function HomePageTextBanner()
             
             
             <div className={styles.leftColumn}>
-                <h3>Left Column</h3>
+                <h3>Who We Are</h3>
                 <div className={styles.columnContents}>
                    <p>{leftColumnText}</p>
                 </div>
             </div>
 
             <div className={styles.rightColumn}>
-                <h3>Right Column</h3>
+                <h3>What We Do</h3>
                 <div className={styles.columnContents}>
                     <p>{rightColumnText}</p>
                 </div>

@@ -10,6 +10,7 @@ import { useEffect, useState } from "react";
 import Button from "../../Components/Button/button"
 import TopBanner from "../../Components/TopBanner/topBanner"
 import HomePageTextBanner from "../../Components/HomePageTextBanner/homePageTextBanner"
+import LargeImageRow from "../../Components/LargeImageRow/largeImageRow"
 
 
 
@@ -56,6 +57,10 @@ export default function HomePage(){
                 </div>
 
                 <div className={styles.partialPageStrip}>
+                <LargeImageRow />
+                </div>
+
+                <div className={styles.partialPageStrip}>
                     <HomePageContactSection />
                 </div>
 
@@ -63,7 +68,7 @@ export default function HomePage(){
 
             </div>
             
-        <Button 
+        <Button className={styles.backToTopButton}
             buttonText="Back to top"
             buttonFunction={() => backToTop()}
         />

@@ -1,18 +1,22 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./verticalTextMenu.module.css"
 
 export default function VerticalTextMenu( 
     { inputItems, groupTitle, filterGroup, 
-        groupClicked, itemClicked
+        groupClicked, itemClicked, hideOtherGroups
     } )
 {
     const filteredItems = inputItems.filter(item => (item.group === filterGroup));
     const [ itemsHidden, setItemsHidden ] = useState(true);
+
+    const [ visibleItem, setVisibleItem ] = useState(null);
+
     function handleGroupClick()
     {
-        //window.alert(filteredItems[0].group);
+  
         groupClicked(filteredItems[0].group);
 
+        
         if (itemsHidden)
         {
             setItemsHidden(false);
@@ -21,12 +25,38 @@ export default function VerticalTextMenu(
         {
             setItemsHidden(true);
         }
+
+
+
+        
+
     }
+
+    function hideGroup()
+    {
+        if (hideOtherGroups)
+        {
+
+            for (let i = 0; i <hideOtherGroups.length; i++)
+            {
+                if (hideOtherGroups[i].group === filteredItems[0].group)
+                {
+                    setItemsHidden(true);
+
+                }
+            }
+        }
+    }
+
+    useEffect(() => 
+    {
+        hideGroup();
+    }, [hideOtherGroups])
     function handleItemClick(productID)
     {
         
         itemClicked(productID);
-        
+     
         
     }
 
@@ -52,7 +82,10 @@ export default function VerticalTextMenu(
                     
                     onClick={() => handleItemClick(product.id)}
                         className={`${styles.groupElement} 
-                            ${itemsHidden ? styles.hidden : styles.visible}`}
+                            ${
+                               itemsHidden ? styles.hidden : styles.visible
+                               
+                            }`}
                         key={product.id}>
                         {product.name}
                         </li>

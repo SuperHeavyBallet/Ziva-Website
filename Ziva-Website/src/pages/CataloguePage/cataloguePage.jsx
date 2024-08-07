@@ -40,6 +40,7 @@ export default function CataloguePage( {updateShoppingCartContents, incomingProd
       });
 
     const [ groupNameToDisplay, setGroupNameToDisplay ] = useState(products[0].groupName)
+    const [ groupNamesToHide, setGroupNamesToHide ] = useState(products[0].groupName)
     const [ itemToDisplay, setItemToDisplay ] = useState(products[productID] || products[0]);
     const [ quantityToAdd, setQuantityToAdd ] = useState(0);
 
@@ -54,11 +55,20 @@ export default function CataloguePage( {updateShoppingCartContents, incomingProd
     function handleGroupClicked(groupName)
     {
         setGroupToDisplay(groupName);
+
+        setGroupNamesToHide(uniqueGroups.filter(item =>(item.group != groupName)));
+    
+
         const chosenItems = products.filter(product => (product.group === groupName))
         setItemToDisplay(chosenItems[0]);
         setGroupNameToDisplay(chosenItems[0].groupName);
         window.scrollTo(0, 0);
     }
+
+    useEffect(() =>
+    {
+        console.log(groupNamesToHide);
+    }, [groupNamesToHide])
     
 
     const [ currentCartContents, setCurrentCartContents ] = useState( () =>
@@ -163,6 +173,7 @@ export default function CataloguePage( {updateShoppingCartContents, incomingProd
                         groupTitle={group.groupName}
                         filterGroup={group.group}
                         groupClicked={(groupClicked) => handleGroupClicked(groupClicked)}
+                        hideOtherGroups={groupNamesToHide}
                         itemClicked={(productID) => handleItemClicked(productID)}
                     />
                 ))

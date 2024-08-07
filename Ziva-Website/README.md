@@ -2,7 +2,7 @@ TODO:
 
 # Today
 
-- //Add Order Form Verification//
+- Research Amazon Menus, clicking one > hiding others conserves space, but seems  a little janky
 
 - Decide on overall CSS theme
 - Create Database for products
@@ -128,3 +128,5 @@ Catalogue Page sends that Product id to Centre Display
 - //Add rough order form populated with input fields and send button//
 - //Make send button collect order info + input info as object and log to console//
 - //Add Total Price to finalOrder object//
+
+- //Add Order Form Verification//

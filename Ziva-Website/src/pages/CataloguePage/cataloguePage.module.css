@@ -1,7 +1,7 @@
 
 
 .pageContainer{
-    background-color: var(--off-bright-colour);
+    background-color: var(--bright-colour);
     width: 100vw;
     max-width:100%;  /* added */
     height: 100%;
@@ -36,7 +36,7 @@
 .leftMenu{
 
     background-color: var(--bright-colour);
-    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 0px;
+
 
     
     width: 10vw;
