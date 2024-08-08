@@ -4,6 +4,7 @@ import styles from "./ordersPage.module.css"
 import { useState, useEffect } from "react";
 import products from "../../../public/products.json"
 import OrderForm from "../../Components/OrderForm/orderForm";
+import Footer from "../../Components/Footer/footer";
 
 export default function OrdersPage( {shoppingCartContents, onRemoveItem, itemClicked, itemQuantityAdjusted} )
 {
@@ -110,6 +111,8 @@ export default function OrdersPage( {shoppingCartContents, onRemoveItem, itemCli
                 />
             </div>
             </div>
+
+            <Footer />
         </div>
     )
 

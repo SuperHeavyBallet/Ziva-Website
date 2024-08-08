@@ -19,14 +19,6 @@ export default function AboutUsPage()
         line5: "Explore our wide selection of products and experience exceptional service tailored to your needs. Thank you for choosing Ziva Komerc!"
     }
 
-    useEffect(() => {
-        backToTop();
-      }, []);
-
-      function backToTop()
-      {
-        window.scrollTo(0, 0);
-      }
 
     return(
         <div className={styles.pageContainer}>
@@ -42,10 +34,7 @@ export default function AboutUsPage()
                 <HomePageContactSection />
             </div>
 
-            <Button 
-            buttonText="Back to top"
-            buttonFunction={() => backToTop()}
-        />
+            
 
             <Footer />
             

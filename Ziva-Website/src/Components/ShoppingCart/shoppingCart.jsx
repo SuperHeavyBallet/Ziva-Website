@@ -105,7 +105,7 @@ export default function ShoppingCart( {cartContents, onRemoveItem, itemClicked, 
 
     return(
         <div className={styles.shoppingCartContainer}>
-            Shopping Cart
+            Your Order:
             
         <div className={styles.shoppingCartItems}>
             {
@@ -124,19 +124,19 @@ export default function ShoppingCart( {cartContents, onRemoveItem, itemClicked, 
                         <div className={styles.shoppingCartSecondBox}>
                             <div className={styles.shoppingCartItemTitle}>
                                 <div>
-                                    <h4>{product.name}</h4>
+                                    <h5>{product.name}</h5>
                                 </div>
                             </div>
  
-                            
+                           {/* <div className={styles.stats}>
+                                    <h5>{product.item.dimensions} {product.item.weight}</h5>
+                                    </div>*/}
 
                                 <div className={styles.price}>
-                                    $: {Number(product.item.price * product.quantity).toFixed(2)}
+                                    <h5>$: {Number(product.item.price * product.quantity).toFixed(2)}</h5>
                                 </div>
 
-                                <div className={styles.stats}>
-                                    {product.item.dimensions} {product.item.weight}
-                                </div>
+                                
                             
                         </div>
 

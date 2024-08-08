@@ -21,14 +21,7 @@ export default function CataloguePage( {updateShoppingCartContents, incomingProd
     
 
     
-    useEffect(() => {
-        backToTop();
-      }, []);
 
-      function backToTop()
-      {
-        window.scrollTo(0, 0);
-      }
     const uniqueGroups = Array.from(new Map(products.map(item => [item.group, item.groupName])).entries()).map(([group, groupName]) => ({ group, groupName }));
 
    
@@ -209,10 +202,6 @@ export default function CataloguePage( {updateShoppingCartContents, incomingProd
             </div>
             </div>
 
-            <Button 
-            buttonText="Back to top"
-            buttonFunction={() => backToTop()}
-        />
             <Footer />
 
         </div>

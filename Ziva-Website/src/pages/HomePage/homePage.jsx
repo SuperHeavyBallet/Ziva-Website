@@ -17,14 +17,7 @@ import LargeImageRow from "../../Components/LargeImageRow/largeImageRow"
 export default function HomePage(){
 
 
-    useEffect(() => {
-        backToTop();
-      }, []);
 
-      function backToTop()
-      {
-        window.scrollTo(0, 0);
-      }
 
     return(
         <div className={styles.pageContainer}>
@@ -68,10 +61,7 @@ export default function HomePage(){
 
             </div>
             
-        <Button className={styles.backToTopButton}
-            buttonText="Back to top"
-            buttonFunction={() => backToTop()}
-        />
+        
 
             <Footer />
         </div>

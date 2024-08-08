@@ -1,7 +1,20 @@
 import styles from "./footer.module.css"
+import { useEffect } from "react";
+import Button from "../Button/button";
 
 export default function Footer()
 {
+    useEffect(() => {
+        backToTop();
+      }, []);
+
+      function backToTop()
+      {
+
+        
+        window.scrollTo(0, 0);
+      }
+
     return(
         <div className={styles.footerContainer}>
 
@@ -19,7 +32,15 @@ export default function Footer()
 
                 <p>20000</p>
             </div>
+        
+            <Button 
+            buttonText="Back to top"
+            buttonFunction={() => backToTop()}
+        />
+        
         </div>
+
+        
     )
     
 }
