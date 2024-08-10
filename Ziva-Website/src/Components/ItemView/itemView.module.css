@@ -2,20 +2,43 @@
     max-width: 30vw;
 
     background-color: var(--bright-colour);
-    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 0px;
+
     display: flex;
     flex-direction: row;
+
 }
 
 
 
 .imageSection{
-    max-width: 300px;
-    
-    padding: 1vh 1vw;
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
 }
 
-.imageSection img{
+.mainImageSection{
+    max-width: 300px;
+}
+
+.subImageSection{
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-between;
+}
+
+.subImageSection img{
+    max-width: 70px;
+    max-height: 70px;
+    margin: 0.5vh 0.5vw;
+}
+.subImageSection img:hover{
+    cursor: pointer;
+}
+.mainImageSection img{
     width: 100%;
     object-fit: cover;
 }
@@ -26,9 +49,27 @@
     padding: 1vh 1vw;
 }
 
+.quantityAdjust{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
 .quantityAdjust p{
     background-color: var(--dark-colour);
-    color: var(--bright-colour)
+    color: var(--bright-colour);
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 0.3vw;
+
+    border-radius: 10px;
+    width: 25px;
+    height: 20px;
 }
 
 .quantityAdjust p:hover

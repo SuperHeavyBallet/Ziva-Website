@@ -2,6 +2,8 @@ TODO:
 
 # Today
 
+- Order Page > IF Empty cart, prompt "Go to Products and add to cart" with Button/Link
+
 - Research Amazon Menus, clicking one > hiding others conserves space, but seems  a little janky
 
 - Decide on overall CSS theme
