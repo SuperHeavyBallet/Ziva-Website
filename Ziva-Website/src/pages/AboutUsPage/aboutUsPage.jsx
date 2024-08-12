@@ -7,6 +7,8 @@ import HomePageContactSection from "../../Components/HomePageContactSection/home
 import { useEffect } from "react";
 import AboutUsBanner from "../../Components/AboutUsBanner/aboutUsBanner";
 import Button from "../../Components/Button/button";
+import LargeImageRow from "../../Components/LargeImageRow/largeImageRow";
+
 
 export default function AboutUsPage()
 {
@@ -26,10 +28,20 @@ export default function AboutUsPage()
 
             <div className={styles.centreSection}>
 
+            <div className={styles.partialPageStrip}>
+                    <HeroBanner
+                        bannerTitle="ZIVA KOMERC"
+                        bannerImageSrc={bannerImage}
+                        bannerText="Veros odus quintum fax niel et hadif."
+                    />
+                </div>
+                
                 <AboutUsBanner 
                     bannerTitle="About Ziva Komerc"
                     bannerTextObject={aboutText}
                 />
+
+                <LargeImageRow />
 
                 <HomePageContactSection />
             </div>
